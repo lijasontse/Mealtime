@@ -2,11 +2,8 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true
   validates :first_name, :last_name, presence: true 
-  validates :password, 
-    length: { minimum: 6, 
-              message: 'Password must be at least 6 characters in length'
-              allow_nil: true }
-  validates :session_token, presence: true, uniquenss: true
+  validates :password, length: { minimum: 6, allow_nil: true }
+  validates :session_token, presence: true, uniqueness: true
 
   attr_reader :password
 
