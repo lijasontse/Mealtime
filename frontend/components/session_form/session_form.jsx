@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import NavBarContainer from '../navbar/navbar_container';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -14,6 +15,9 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
