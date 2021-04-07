@@ -52,8 +52,8 @@ class NavBar extends React.Component {
       </div>
     ) : (
       <nav className="nav-links">
-        <Link to="/signup" className="signup">Sign Up</Link>
         <Link to="/login" className="login">Log In</Link>
+        <Link to="/signup" className="signup">Sign Up</Link>
       </nav>
     );
 
@@ -61,10 +61,6 @@ class NavBar extends React.Component {
       <div className="main-nav">
         <div className="right-nav">
           {display}
-        </div>
-        <Link to="/"><img className="mt-logo" src={window.mealTimeLogo} /></Link>
-        <div className="homepage-img">
-          <img className="homepage-art" src={window.homePage} />
         </div>
       </div>
     );

@@ -19,6 +19,7 @@ class SessionForm extends React.Component {
   componentDidMount() {
     this.props.clearErrors();
   }
+  
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value

@@ -14,12 +14,17 @@
   height: 45px;
 }
 
+.header-top a {
+  cursor: default;
+}
+
 .mt-logo {
   display: block;
   height: 50px;
   width: auto;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
 }
 
 .sessions-art {
@@ -56,7 +61,7 @@
 }
 
 .session-form-link {
-  color: #0073bb;
+  color: green;
   font-size: 14px;
 }
 
@@ -140,6 +145,6 @@
   padding: 10px 10px;
   border-radius: 5px;
   border: 1px solid #999;
-  background-color: #0073bb;
+  background-color: green;
   color: #fff;
 }
