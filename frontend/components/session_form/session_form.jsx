@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentDidMount() {
@@ -29,6 +30,11 @@ class SessionForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
+
+  // handleDemo(e) {
+  //   e.preventDefault();
+
+  // }
 
   renderErrors() {
     return (
