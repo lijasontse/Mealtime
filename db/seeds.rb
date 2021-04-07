@@ -36,3 +36,9 @@ ActiveRecord::Base
     password: 'a123456'
   )
 
+  demoUser = User.create!(
+    first_name: "Dee",
+    last_name: "Demo",
+    email: "demouser@demo.com",
+    password: "good123"
+  )

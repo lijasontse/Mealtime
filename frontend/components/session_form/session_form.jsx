@@ -33,14 +33,17 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    
+    this.props.handleDemo({
+      email: 'demouser@demo.com',
+      password: 'good123'
+    })
   }
 
   renderErrors() {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`errors-${i}`}>
+          <li className="session-error alert-error" key={`errors-${i}`}>
             {error}
           </li>
         ))}
@@ -66,7 +69,7 @@ class SessionForm extends React.Component {
                 <div className="session-form">
                   <label>
                     <input 
-                      type="text" 
+                      type="email" 
                       value={this.state.email} 
                       onChange={this.update('email')}
                       className="session-input"
@@ -85,6 +88,7 @@ class SessionForm extends React.Component {
                     />
                   </label>
                   <input className="session-submit" type="submit" value={this.props.formType} />
+                  <button className="demo-login" onClick={this.handleDemo}>Demo Login</button>
                   <p className="session-form-footer">New To Mealtime? {this.props.navLink}</p>
                 </div>
               </form>
@@ -95,7 +99,7 @@ class SessionForm extends React.Component {
       )       
     } else if (this.props.formType === 'Sign Up') {
       return (
-        <div className="session-form">
+        <div className="main-session-form">
           <div className="header-top">
             <Link to="/"><img className="mt-logo" src={window.mealTimeLogo} /></Link>
           </div>
@@ -106,7 +110,7 @@ class SessionForm extends React.Component {
               <p className="session-form-subheader">Connect with great local businesses</p>
               <p className="session-form-subheader3">By continuing, you agree to MealTime's Wildest Dreams!</p>
               {this.renderErrors()}
-              <div className="session-form">
+              <div className="session-form-inputs">
                 <label>
                   <input 
                     type="text" 
@@ -127,7 +131,7 @@ class SessionForm extends React.Component {
                 </label>
                 <label>
                     <input
-                    type="text"
+                    type="email"
                     value={this.state.email}
                     onChange={this.update('email')}
                     className="session-input"
@@ -146,6 +150,7 @@ class SessionForm extends React.Component {
                     />
                 </label>
                 <input className="session-submit" type="submit" value={this.props.formType} />
+                <button className="demo-signup" onClick={this.handleDemo}>Demo Login</button>
                 <p className="session-form-footer">Already on Mealtime? {this.props.navLink}</p>
               </div>
             </form>
