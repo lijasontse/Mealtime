@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import NavBarContainer from '../navbar/navbar_container';
+
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleDemo = this.handleDemo.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentDidMount() {
@@ -31,10 +31,10 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
-  // handleDemo(e) {
-  //   e.preventDefault();
-
-  // }
+  handleDemo(e) {
+    e.preventDefault();
+    
+  }
 
   renderErrors() {
     return (
@@ -52,93 +52,104 @@ class SessionForm extends React.Component {
 
     if (this.props.formType === 'Log In') {
       return (
-        <div className="header">
-          <div className="session-form-container">
-            <form onSubmit={this.handleSubmit} className="session-form-box">
-              Log in to MealTime!
-              <br/>
-              New To MealTime? {this.props.navLink}
-              {this.renderErrors()}
-              By logging in, you agree to MealTime's Wildest Imaginations!
-              <br/>
-              <div className="session-form">
-                <br/>
-                <label>Email: {' '}
-                  <input 
-                    type="text" 
-                    value={this.state.email} 
-                    onChange={this.update('email')}
-                    className="session-input"
-                  />
-                </label>
-                <br/>
-                <label>Password: {' '}
-                  <input 
-                    type="password" 
-                    value={this.state.password}
-                    onChange={this.update('password')}
-                    className="session-input"
-                  />
-                </label>
-                <br/>
-                <input className="session-submit" type="submit" value={this.props.formType} />
-              </div>
-            </form>
+        <div className="session-form">
+          <div className="header-top">
+            <Link to="/"><img className="mt-logo" src={window.mealTimeLogo}/></Link>
+          </div>
+          <div className="session-form-main">
+            <div className="session-form-container">
+              <form onSubmit={this.handleSubmit} className="session-form-box">
+                <p className="session-form-header">Log in to Mealtime!</p> 
+                <p className="session-form-subheader">New To Mealtime? {this.props.navLink}</p>
+                <p className="session-form-subheader3">By logging in, you agree to Mealtimes's Wildest Imaginations!</p>
+                {this.renderErrors()}
+                <div className="session-form">
+                  <label>
+                    <input 
+                      type="text" 
+                      value={this.state.email} 
+                      onChange={this.update('email')}
+                      className="session-input"
+                      placeholder="Email"
+                      required
+                    />
+                  </label>
+                  <label>
+                    <input 
+                      type="password" 
+                      value={this.state.password}
+                      onChange={this.update('password')}
+                      className="session-input"
+                      placeholder="Password"
+                      required
+                    />
+                  </label>
+                  <input className="session-submit" type="submit" value={this.props.formType} />
+                  <p className="session-form-footer">New To Mealtime? {this.props.navLink}</p>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       )       
     } else if (this.props.formType === 'Sign Up') {
       return (
-        <div className="session-form-container"> 
-          <form onSubmit={this.handleSubmit} className="session-form-box">
-            Sign Up for MealTime!
-            <br/>
-            Already on MealTime? {this.props.navLink}
-            {this.renderErrors()}
-            Connect with great local businesses
-            By continuing, you agree to MealTime's Wildest Dreams!
-            <br/>
-            <div className="session-form">
-              <br/>
-              <label>First Name: {' '}
-                <input 
-                  type="text" 
-                  value={this.state.first_name} 
-                  onChange={this.update('first_name')}
-                  className="session-input"
-                />
-              </label>
-              <br/>
-              <label>Last Name: {' '}
-                <input
-                  type="text"
-                  value={this.state.last_name}
-                  onChange={this.update('last_name')}
-                  className="session-input"
-                />
-              </label>
-              <br/>
-              <label>Email: {' '}
+        <div className="header">
+          <Link to="/" className="mt-logo">
+            Mealtime
+          </Link>
+        <div className="session-form-main">
+          <div className="session-form-container"> 
+            <form onSubmit={this.handleSubmit} className="session-form-box">
+              <p className="session-form-header">Sign Up for Mealtime</p> 
+              <p className="session-form-subheader">Connect with great local businesses</p>
+              <p className="session-form-subheader3">By continuing, you agree to MealTime's Wildest Dreams!</p>
+              {this.renderErrors()}
+              <div className="session-form">
+                <label>
+                  <input 
+                    type="text" 
+                    value={this.state.first_name} 
+                    onChange={this.update('first_name')}
+                    className="session-sign-up"
+                    placeholder="First Name"
+                    required
+                  />
                   <input
-                  type="text"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  className="session-input"
-                />
-              </label>
-              <br />
-              <label>Password: {' '}
-                  <input
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className="session-input"
-                />
-              </label>
-              <br />
-              <input className="session-submit" type="submit" value={this.props.formType} />
+                    type="text"
+                    value={this.state.last_name}
+                    onChange={this.update('last_name')}
+                    className="session-sign-up-1"
+                    placeholder="Last Name"
+                    required
+                  />
+                </label>
+                <label>
+                    <input
+                    type="text"
+                    value={this.state.email}
+                    onChange={this.update('email')}
+                    className="session-input"
+                    placeholder="Email"
+                    required
+                    />
+                </label>
+                <label>
+                    <input
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    className="session-input"
+                    placeholder="Password"
+                    required
+                    />
+                </label>
+                <input className="session-submit" type="submit" value={this.props.formType} />
+                <p className="session-form-footer">Already on Mealtime? {this.props.navLink}</p>
+              </div>
+            </form>
             </div>
-          </form>
+          </div>
         </div>
       );
     }

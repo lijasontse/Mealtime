@@ -1,0 +1,123 @@
+// .mt-logo {
+//   background-color: #d32323;
+//   display: flex;
+//   justify-content: center;
+//   height: 200px;
+//   width: 100%;
+// }
+
+.header-top {
+  background-color: #d32323;
+  position: relative;
+  padding: 10px 0px 10px 0px;
+  display: grid;
+  height: 45px;
+}
+
+.mt-logo {
+  display: block;
+  height: 50px;
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.session-form-main {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 120px 0 120px 0;
+  padding-right: 300px;
+}
+
+.session-form-container {
+  margin: 100px 0 100px 0px;
+}
+
+.session-form-header {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  color: #d32323;
+  font-weight: bold;
+  text-align: center;
+}
+
+.session-form-subheader {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.session-form-link {
+  color: #0073bb;
+  font-size: 14px;
+}
+
+.session-form-footer {
+  font-family: 'Open Sans', sans-serif;
+  text-align: right;
+  font-size: 12px;
+}
+
+.session-form-link:hover {
+  text-decoration: underline;
+}
+
+
+.session-form-subheader3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.session-form {
+  margin-top: 12px;
+}
+
+.session-input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  font-size: 15px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid #999;
+
+}
+
+.session-submit {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  background: #d32323;
+  color: #fff;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.session-sign-up {
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  line-height: 1.3;
+  font-size: 13px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid #999
+}
+
+.session-sign-up-1 {
+  float: right;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  line-height: 1.3;
+  font-size: 13px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  margin-left: 5px;
+}

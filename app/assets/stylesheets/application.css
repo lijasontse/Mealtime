@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ html {
+   overflow: hidden;
+ }
+
+ body {
+   box-sizing: border-box;
+   margin: 0;
+ }
+
+ html, body {
+   height: 100%;
+ }
