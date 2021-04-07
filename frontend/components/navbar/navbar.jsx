@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout }) => {
-  const sessionLinks = () => (
-    <nav className="login-signup">
-        <Link to="/login">Log In</Link>
-        &nbsp;or&nbsp;
-        <Link to="/signup">Sign Up</Link>
-    </nav>
-  );
+  // const sessionLinks = () => (
+  //   <nav className="login-signup">
+  //       <Link to="/login">Log In</Link>
+  //       &nbsp;or&nbsp;
+  //       <Link to="/signup">Sign Up</Link>
+  //   </nav>
+  // );
 
   const navDropDown = () => (
     <div className="header-group">
@@ -21,7 +21,7 @@ const NavBar = ({ currentUser, logout }) => {
     </div>
   );
 
-  return currentUser ? navDropDown() : sessionLinks();
+  return currentUser ? navDropDown() : null;
 };
 
 export default NavBar;
