@@ -8,23 +8,31 @@
 
 .right-nav {
   background-image: url("./images/homepage.png");
-  height: 50vh;
+  height: 65vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
+}
+
+.mt-nav-logo {
+  background-image: url('./images/mtlogo2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15vh;
+  height: 50px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  padding: 150px 0;
+  cursor: pointer;
 }
 
 div + a {
   cursor: default;
 }
 
-
-
-
-// .right-nav {
-//   display: flex;
-//   justify-content: center;
-// }
 
 .nav-links {
   display: flex;
@@ -33,7 +41,7 @@ div + a {
 }
 
 .login {
-  margin: 50px 20px 0 0;
+  margin: -600px 20px 0 0;
   font-family: 'Open Sans', sans-serif;
   padding: 0 15px;
   background: transparent;
@@ -49,7 +57,7 @@ div + a {
 }
 
 .signup {
-  margin: 50px 300px 0 0;
+  margin: -600px 300px 0 0;
   font-family: 'Open Sans', sans-serif;
   padding: 5px 15px;
   background: transparent;
