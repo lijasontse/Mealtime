@@ -88,16 +88,17 @@ class SessionForm extends React.Component {
                   <p className="session-form-footer">New To Mealtime? {this.props.navLink}</p>
                 </div>
               </form>
+              <img className="sessions-art" src={window.sessionArt} />
             </div>
           </div>
         </div>
       )       
     } else if (this.props.formType === 'Sign Up') {
       return (
-        <div className="header">
-          <Link to="/" className="mt-logo">
-            Mealtime
-          </Link>
+        <div className="session-form">
+          <div className="header-top">
+            <Link to="/"><img className="mt-logo" src={window.mealTimeLogo} /></Link>
+          </div>
         <div className="session-form-main">
           <div className="session-form-container"> 
             <form onSubmit={this.handleSubmit} className="session-form-box">
@@ -148,6 +149,7 @@ class SessionForm extends React.Component {
                 <p className="session-form-footer">Already on Mealtime? {this.props.navLink}</p>
               </div>
             </form>
+            <img className="sessions-art" src={window.sessionArt} />
             </div>
           </div>
         </div>

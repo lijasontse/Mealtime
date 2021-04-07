@@ -17,19 +17,27 @@
 .mt-logo {
   display: block;
   height: 50px;
-  width: 10%;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
 }
 
+.sessions-art {
+  display: flex;
+  align-content: flex-end;
+  height: 342px;
+  width: 382px;
+  margin-left: 100px;
+}
+
 .session-form-main {
+  margin: 120px 0 120px 0;
   display: flex;
   justify-content: space-evenly;
-  margin: 120px 0 120px 0;
-  padding-right: 300px;
 }
 
 .session-form-container {
+  display: flex;
   margin: 100px 0 100px 0px;
 }
 
