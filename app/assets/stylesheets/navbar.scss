@@ -7,7 +7,7 @@
 // }
 
 .right-nav {
-  background-image: url("./images/homepage.png");
+  background-image: asset-url("homepage.png");
   height: 65vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
 }
 
 .mt-nav-logo {
-  background-image: url('./images/mtlogo2.png');
+  background-image: asset-url('mtlogo2.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 15vh;
