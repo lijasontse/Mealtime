@@ -45,10 +45,13 @@ class NavBar extends React.Component {
       <div className="nav-list">
         <div className="user-dropdown">
           <div className="user-info">
-            {currentUser.first_name} {currentUser.last_name}
+            <div className="user-name">{currentUser.first_name} {currentUser.last_name}</div>
+            <button className="logout" onClick={logout}>Log Out</button>
           </div>
         </div>
-        <button className="logout" onClick={logout}>Log Out</button>
+        <div className="nav-logged-in">
+          <Link to="/"></Link>
+        </div>
       </div>
     ) : (
     <div className="nav-logo">
