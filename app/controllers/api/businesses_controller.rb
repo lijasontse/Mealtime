@@ -1,6 +1,6 @@
 class Api::BusinessesController < ApplicationController
 
-  before_action :require_logged_in, only: [:create]
+  before_action :require_logged_in, only: [:create, :update]
 
   def index
     @businesses = Business.all

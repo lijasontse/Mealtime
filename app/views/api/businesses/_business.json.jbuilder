@@ -8,4 +8,7 @@ json.extract! business,
               :zip_code,
               :phone_number,
               :website_url,
-              :owner_id
+              :owner_id,
+              :lat,
+              :lng
+            
