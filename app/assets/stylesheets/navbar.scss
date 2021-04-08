@@ -1,11 +1,3 @@
-// .main-nav {
-//   display: flex;
-//   flex-direction: column;
-//   padding: 10px, 0;
-//   border-bottom: 1px solid transparent;
-//   background-size: cover;
-// }
-
 .right-nav {
   background-image: asset-url("homepage.png");
   height: 65vh;
@@ -14,24 +6,37 @@
   background-size: cover;
 }
 
-.mt-nav-logo {
-  background-image: asset-url('mtlogo2.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 15vh;
-  height: 50px;
-  width: 250px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 70px;
-  padding: 150px 0;
-  cursor: pointer;
-}
+// .mt-nav-logo {
+//   background-image: asset-url('mtlogo2.png');
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: 15vh;
+//   height: 50px;
+//   width: 250px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding: 150px 0;
+//   cursor: pointer;
+// }
 
-div + a {
+.mt-nav-logo a {
   cursor: default;
 }
 
+.mt-nav-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-home {
+  display: block;
+  height: 50px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 145px;
+  cursor: pointer;
+}
 
 .nav-links {
   display: flex;
@@ -40,7 +45,7 @@ div + a {
 }
 
 .login {
-  margin: -600px 20px 0 0;
+  margin: -300px 20px 0 0;
   font-family: 'Open Sans', sans-serif;
   padding: 0 15px;
   background: transparent;
@@ -56,7 +61,7 @@ div + a {
 }
 
 .signup {
-  margin: -600px 300px 0 0;
+  margin: -300px 365px 0 0;
   font-family: 'Open Sans', sans-serif;
   padding: 5px 15px;
   background: transparent;
@@ -81,7 +86,6 @@ div + a {
   justify-content: flex-end;
   align-items: center;
   text-align: center;
-  margin-top: 25px;
 }
 
 .user-name {
@@ -91,7 +95,7 @@ div + a {
   border-radius: 5px;
   color: #fff;
   padding: 10px 10px;
-  margin: 10px 275px 0 0;
+  margin: 0 365px 0 0;
   background-color: #0073bb;
   text-align: center;
   position: absolute;
@@ -104,7 +108,7 @@ div + a {
   border-radius: 5px;
   color: #0073bb;
   font-size: 12px;
-  margin: 90px 275px 0 0;
+  margin: 85px 365px 0 0;
   box-sizing: border-box;
   text-align: center;
 }
@@ -113,16 +117,11 @@ div + a {
   background-image: asset-url('mtlogo2.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 15vh;
+  background-size: 14.2vh;
   height: 50px;
   width: 250px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 29px;
   cursor: pointer;
-}
-
-.nav-list {
-  margin-top: 70px;
-
 }

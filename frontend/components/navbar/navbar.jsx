@@ -56,7 +56,7 @@ class NavBar extends React.Component {
     ) : (
     <div className="nav-logo">
           <div className="mt-nav-logo">
-            <Link to="/"></Link>
+            <Link to="/"><img className="logo-home" src={window.mealTimeLogo2}/></Link>
           </div>
       <nav className="nav-links">
           <Link to="/login" className="login">Log In</Link>
