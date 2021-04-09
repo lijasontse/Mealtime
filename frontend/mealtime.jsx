@@ -18,19 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-
   
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.fetchBusinesses = fetchBusinesses;
-  window.fetchBusiness = fetchBusiness;
-  
-
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
 
+
 // tests
+// window.getState = store.getState;
+// window.dispatch = store.dispatch;
+// window.fetchBusinesses = fetchBusinesses;
+// window.fetchBusiness = fetchBusiness;
 // window.login = login;
 // window.signup = signup;
 // window.logout = logout; 
