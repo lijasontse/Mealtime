@@ -5,13 +5,14 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import NavBarContainer from './navbar/navbar_container';
 import errorPage from './error_page';
 import { AuthRoute } from '../util/route_util';
+import SplashContainer from './splash/splash_container';
 
 const App = () => (
   <div>
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      <Route exact path="/" component={NavBarContainer}/>
+      <Route exact path="/" component={SplashContainer}/>
       <Route component={errorPage}/>
     </Switch>
   </div>

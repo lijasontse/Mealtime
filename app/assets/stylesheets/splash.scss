@@ -1,0 +1,37 @@
+.splash-index {
+  margin: 40px;
+  display: flex;
+  // flex-direction: column;
+  flex-direction: column;
+}
+
+.splash-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
+  color: #d32323;
+}
+
+.splash-biz {
+  display: flex;
+  justify-content: center;
+  // flex-flow: row nowrap;
+
+}
+
+.biz-pic {
+  width: 295px;
+  height: 250px;
+  margin: 0 18px 0 18px;
+  border: 1px solid #999;
+  border-radius: 6px;
+}
+
+.biz-cap {
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  color: #0073bb;;
+}
+

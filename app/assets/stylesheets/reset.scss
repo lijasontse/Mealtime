@@ -61,16 +61,10 @@ input[type="submit"] {
 }
 
 img {
-	display: block;
 	width: 100%;
 	height: auto;
-	border: 0;
-	border-style: 0;
+	border-style: none;
 	text-decoration: none;
 	outline: none;
 }
 
-body, html {
-	height: 100%;
-	width: 100%;
-}
