@@ -1,9 +1,34 @@
-.splash-index {
-  margin: 40px;
-  display: flex;
-  // flex-direction: column;
-  flex-direction: column;
+.splash-head {
+  background-image: asset-url("homepage.png");
+  height: 61vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+#nav-bar {
+  width: 100%;
+  height: 116px;
+}
+
+.mt-splash-logo a {
+  cursor: default;
+}
+
+.logo-home {
+  display: block;
+  height: 50px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.splash-index {
+  margin: 440px;
+}
+
 
 .splash-title {
   display: flex;
@@ -16,8 +41,6 @@
 .splash-biz {
   display: flex;
   justify-content: center;
-  // flex-flow: row nowrap;
-
 }
 
 .biz-pic {

@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
 
 
 // tests
-// window.getState = store.getState;
-// window.dispatch = store.dispatch;
 // window.fetchBusinesses = fetchBusinesses;
 // window.fetchBusiness = fetchBusiness;
 // window.login = login;

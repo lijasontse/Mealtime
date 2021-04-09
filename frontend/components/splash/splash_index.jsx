@@ -7,32 +7,33 @@ class SplashIndex extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchBusinesses();
-  }  
-
   render() {
     return (
-      <header id="nav-bar"><NavBarContainer/>
-        <div className="splash-index">
-          <div className="splash-title">Hot &#38; New Businesses</div>
-          <div className="splash-biz">
-            <div className="biz-1">
-              <Link to='businesses/1'><img src={window.biz1} className="biz-pic"/></Link>
-              <div>
-                <figcaption className="biz-cap">Shan Dong Restaurant</figcaption>
-              </div>
-            </div>
-            <div className="biz-2">
-              <Link to='businesses/2'><img src={window.biz2} className="biz-pic" /></Link>
-              <div>
-                <figcaption className="biz-cap">Ricky Thai Bistro</figcaption>
-              </div>
-            </div>
-            <div className="biz-3">
-              <Link to='businesses/3'><img src={window.biz3} className="biz-pic" /></Link>
-              <div>
-                <figcaption className="biz-cap">Bi-Rite Creamery</figcaption>
+      <header className="splash-head">
+        <div className="mt-splash-logo">
+          <div id="nav-bar"><NavBarContainer/>
+          <Link to="/"><img className="logo-home" src={window.mealTimeLogo2} /></Link>
+            <div className="splash-index">
+              <div className="splash-title">Hot &#38; New Businesses</div>
+              <div className="splash-biz">
+                <div className="biz-1">
+                  <Link to='businesses/1'><img src={window.biz1} className="biz-pic"/></Link>
+                  <div>
+                    <figcaption className="biz-cap">Shan Dong Restaurant</figcaption>
+                  </div>
+                </div>
+                <div className="biz-2">
+                  <Link to='businesses/2'><img src={window.biz2} className="biz-pic" /></Link>
+                  <div>
+                    <figcaption className="biz-cap">Ricky Thai Bistro</figcaption>
+                  </div>
+                </div>
+                <div className="biz-3">
+                  <Link to='businesses/3'><img src={window.biz3} className="biz-pic" /></Link>
+                  <div>
+                    <figcaption className="biz-cap">Bi-Rite Creamery</figcaption>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
