@@ -12,3 +12,10 @@ json.extract! business,
               :lat,
               :lng
             
+if business.photo.attached?
+  json.photoUrl url_for(business.photo)
+end
+
+if business.photos.attached?
+  json.photoUrls business.photos.map { |photo| url_for(photo) }
+end
