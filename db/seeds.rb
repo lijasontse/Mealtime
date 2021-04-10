@@ -37,7 +37,7 @@ ActiveRecord::Base
     email: "teddy@gmail.com",
     password: 'a123456'
   )
-
+  
   demoUser = User.create!(
     first_name: "Dee",
     last_name: "Demo",
@@ -86,3 +86,7 @@ ActiveRecord::Base
     lng: -122.42576200949073,
     owner_id: 2
   )
+
+  Business.all.each_with_index do |business, i|
+    business.file = open
+  end

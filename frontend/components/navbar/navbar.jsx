@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
+
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -10,12 +13,22 @@ class NavBar extends React.Component {
     const { currentUser, logout } = this.props;
     const display = currentUser ? (
       <div className="nav-list">
-        <div className="user-dropdown">
-          <div className="user-info">
-            <div className="user-name">{currentUser.first_name} {currentUser.last_name}</div>
-            <button className="logout" onClick={logout}>Log Out</button>
-          </div>
-        </div>
+        <li id="user-navs">
+          <FontAwesomeIcon icon={faUserAstronaut} size="2x" />
+          <ul className="user-dropdown-btn">
+            <li>
+              <ul className="user-info">
+                <span className="user-dropdown-info"></span>
+                <ul className="user-name"> 
+                  <li>{currentUser.first_name}&nbsp;{currentUser.last_name}</li>
+                </ul>
+              </ul>
+            </li>
+            <li className="logout-btn">
+              <button className="logout" onClick={logout}>Log Out</button>
+            </li>
+          </ul>
+        </li>
         <div className="nav-logged-in">
           <Link to="/"></Link>
         </div>

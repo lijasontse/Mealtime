@@ -1,13 +1,61 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
-const BusinessIndexItem = ({ business }) => {
-  <div className="businesses-index-header">
-    <ul className="biz-index-ul">
-      <li className="biz-lists">
-        <div className="biz-name">{business.name}</div>
-      </li>
-      <div className="biz-category">{business.category}</div>
-    </ul>
-  </div>
+
+class BusinessIndexItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() { 
+    const { business } = this.props; 
+    return (
+      <div className="businesses-index-header">
+        <Link to={`/businesses/${business.id}`}>
+          <ul className="biz-index-ul">
+            <div className="biz-photo"></div>
+            <li className="biz-details">
+              <div className="biz-name">{business.name}</div>
+              <div className="biz-category">{business.category}</div>
+              <div className="for-delivery">
+                <FontAwesomeIcon 
+                  icon={faCheck}
+                  fixedWidth
+                />
+                <span>Delivery</span>
+              </div>
+              <div className="for-takeout">
+                <FontAwesomeIcon
+                  icon={faCheck}
+                  fixedWidth
+                />
+                <span>Takeout</span>
+              </div>
+              <div className="for-outdoor">
+                <FontAwesomeIcon
+                  icon={faCheck}
+                  fixedWidth
+                />
+                <span>Outdoor Seating</span>
+              </div>
+              <div className="contact-methods">
+                <div className="biz-phone">{business.phone_umber}</div>
+                <div className="whole-address">
+                  <div className="street-address">{business.address}</div>
+                  <div className="regional-address">
+                    {business.city}{", "}
+                    {business.state} {business.zip_code}
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </Link>
+      </div>
+    );
+  }
 }
+
+export default BusinessIndexItem;

@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { fetchBusinesses } from '../../actions/business_actions';
 import SplashIndex from './splash_index';
+import { logout } from '../../actions/session_actions';
 
-const mapStateToProps = ({ entities: {businesses} }) => ({
-  businesses: businesses
+const mapStateToProps = ({ session, entities: { users } }) => ({
+  currentUser: users[session.id]
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchBusinesses: () => dispatch(fetchBusinesses())
+  logout: () => dispatch(logout())
 });
 
 export default withRouter(
