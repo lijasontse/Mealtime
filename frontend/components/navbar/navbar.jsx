@@ -47,6 +47,9 @@ class NavBar extends React.Component {
         <div className="right-nav">
           {display}
         </div>
+        <div className="left-nav">
+          <Link to="/"><img className="logo-left" src={window.mealTimeLogo2} /></Link>
+        </div>
       </div>
     );
   }

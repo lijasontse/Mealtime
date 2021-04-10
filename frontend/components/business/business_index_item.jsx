@@ -13,7 +13,7 @@ class BusinessIndexItem extends React.Component {
     const { business } = this.props; 
     return (
       <div className="businesses-index-header">
-        <Link to={`/businesses/${business.id}`}>
+        {/* <Link to={`/businesses/${business.id}`}> */}
           <ul className="biz-index-ul">
             <div className="biz-photo"></div>
             <li className="biz-details">
@@ -52,7 +52,7 @@ class BusinessIndexItem extends React.Component {
               </div>
             </li>
           </ul>
-        </Link>
+        {/* </Link> */}
       </div>
     );
   }

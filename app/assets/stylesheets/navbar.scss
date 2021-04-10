@@ -11,12 +11,27 @@
 //   cursor: pointer;
 // }
 
+
+.left-nav {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 150px;
+  
+}
+
+.logo-left {
+  width: auto;
+  height: 50px;
+  width: auto;
+}
+
 #user-navs {
   position: relative;
   padding: 7px 9px;
   display: flex;
   justify-content: flex-end;
-  margin: 30px 40px 0 0;
+  margin: 0 40px 0 0;
 }
 
 #user-navs:hover .user-dropdown-btn{
@@ -85,7 +100,9 @@
 
 
 .all-navs {
-  height: 135px;
+  display: flex;
+  justify-content: space-between;
+  // flex-direction: column-reverse;
 }
 
 .nav-links {
