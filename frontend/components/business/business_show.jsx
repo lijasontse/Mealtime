@@ -23,19 +23,27 @@ class BusinessShow extends React.Component {
         <NavBarContainer />
         <div className="biz-show-header">
           <ul className="biz-show-ul">
-            {/* <img className="show-header-images" src={business.photos} /> */}
-            <h2 className="biz-show-name">{business.name}</h2>
-            <li className="biz-show-details">
-              <div className="biz-show-claimed">
-                <FontAwesomeIcon
-                  icon={faCheckCircle}
-                  fixedWidth
-                />
-                <span>Claimed</span>
-              </div>
-              <div className="biz-show-category">{business.category}</div>
-            </li>
+            {
+              business.photoUrls.map((pic, i) => (
+                <div key={i} className="show-header-imgs">
+                  <img src={pic} className="show-img" />
+                </div>
+              ))
+            }
           </ul>
+            <div className="show-top-info">
+              <h2 className="biz-show-name">{business.name}</h2>
+              <li className="biz-show-details">
+                <div className="biz-show-claimed">
+                  <FontAwesomeIcon
+                    icon={faCheckCircle}
+                    fixedWidth
+                  />
+                  <span>Claimed</span>
+                </div>
+                <div className="biz-show-category">{business.category}</div>
+              </li>
+            </div>
         </div>
         <div className="biz-show-review">Write a Review</div>
         <ul className="biz-show-body">
