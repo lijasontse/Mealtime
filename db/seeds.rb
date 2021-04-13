@@ -59,6 +59,18 @@ ActiveRecord::Base
     owner_id: 1
   )
 
+  pic1Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz1a.png')
+  biz1.photo.attach(io: pic1Index, filename: 'biz1a.png')
+
+  picShow1a = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz1b.png')
+  biz1.photos.attach(io: picShow1a, filename: 'biz1b.png')
+  picShow1b = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz1c.png')
+  biz1.photos.attach(io: picShow1b, filename: 'biz1c.png')
+  picShow1c = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz1d.png')
+  biz1.photos.attach(io: picShow1c, filename: 'biz1d.png')
+  picShow1d = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz1e.png')
+  biz1.photos.attach(io: picShow1d, filename: 'biz1e.png')
+
   biz2 = Business.create!(
     name: "Ricky Thai Bistro",
     category: "Thai",
@@ -73,6 +85,18 @@ ActiveRecord::Base
     owner_id: 3
   )
 
+  pic2Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz2a.png')
+  biz2.photo.attach(io: pic2Index, filename: 'biz2a.png')
+
+  picShow2a = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz2b.png')
+  biz2.photos.attach(io: picShow2a, filename: 'biz2b.png')
+  picShow2b = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz2c.png')
+  biz2.photos.attach(io: picShow2b, filename: 'biz2c.png')
+  picShow2c = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz2d.png')
+  biz2.photos.attach(io: picShow2c, filename: 'biz2d.png')
+  picShow2d = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz2e.png')
+  biz2.photos.attach(io: picShow2d, filename: 'biz2e.png')
+
   biz3 = Business.create!(
     name: "Bi-Rite Creamery",
     category: "Ice Cream & Frozen Yogurt",
@@ -86,3 +110,15 @@ ActiveRecord::Base
     lng: -122.42576200949073,
     owner_id: 2
   )
+  
+  pic3Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz3a.png')
+  biz3.photo.attach(io: pic3Index, filename: 'biz3a.png')
+
+  picShow3a = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz3b.png')
+  biz3.photos.attach(io: picShow3a, filename: 'biz3b.png')
+  picShow3b = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz3c.png')
+  biz3.photos.attach(io: picShow3b, filename: 'biz3c.png')
+  picShow3c = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz3d.png')
+  biz3.photos.attach(io: picShow3c, filename: 'biz3d.png')
+  picShow3d = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz3e.png')
+  biz3.photos.attach(io: picShow3d, filename: 'biz3e.png')

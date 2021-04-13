@@ -16,14 +16,14 @@ class BusinessShow extends React.Component {
   render() {
     const { business } = this.props;
 
-    if (business === undefined) return <h1>Loading...</h1>
+    if (!business) return <h1>Loading...</h1>
             
     return (
       <div>
         <NavBarContainer />
         <div className="biz-show-header">
           <ul className="biz-show-ul">
-            {/* <img className="show-images" src={topPhotos} /> */}
+            {/* <img className="show-header-images" src={business.photos} /> */}
             <h2 className="biz-show-name">{business.name}</h2>
             <li className="biz-show-details">
               <div className="biz-show-claimed">

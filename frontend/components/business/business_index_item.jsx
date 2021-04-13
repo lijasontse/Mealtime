@@ -10,16 +10,16 @@ class BusinessIndexItem extends React.Component {
   }
 
   render() { 
-    const { business } = this.props; 
+    const { business, idx } = this.props; 
     return (
       <div className="businesses-index-header">
         <Link to={`/businesses/${business.id}`}>
           <ul className="biz-index-ul">
             <div className="biz-photo">
-
+              <img src={business.photoUrl} />
             </div>
             <li className="biz-details">
-              <div className="biz-name">{business.name}</div>
+              <div className="biz-name">{idx + 1}. {business.name}</div>
               <div className="biz-category">{business.category}</div>
               <div className="for-delivery">
                 <FontAwesomeIcon 
