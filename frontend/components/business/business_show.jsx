@@ -14,7 +14,7 @@ class BusinessShow extends React.Component {
   }
 
   render() {
-    const { business } = this.props;
+    const { business, photoUrls } = this.props;
 
     if (!business) return <h1>Loading...</h1>
             
