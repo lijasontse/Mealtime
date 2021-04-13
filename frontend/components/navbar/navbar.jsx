@@ -35,20 +35,20 @@ class NavBar extends React.Component {
       </div>
     ) : (
     <div className="nav-header">
-      <nav className="nav-links">
+      <div className="nav-links">
           <Link to="/login" className="login">Log In</Link>
           <Link to="/signup" className="signup">Sign Up</Link>
-      </nav>
+      </div>
     </div>
     );
     
     return (
       <div className="all-navs">
-        <div className="right-nav">
-          {display}
-        </div>
         <div className="left-nav">
           <Link to="/"><img className="logo-left" src={window.mealTimeLogo2} /></Link>
+        </div>
+        <div className="right-nav">
+          {display}
         </div>
       </div>
     );

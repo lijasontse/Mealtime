@@ -16,7 +16,7 @@ class BusinessShow extends React.Component {
   render() {
     const { business } = this.props;
 
-    if (!business) return <h1>Loading...</h1>
+    if (business === undefined) return <h1>Loading...</h1>
             
     return (
       <div>
