@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
 class BusinessIndexItem extends React.Component {
@@ -13,9 +13,11 @@ class BusinessIndexItem extends React.Component {
     const { business } = this.props; 
     return (
       <div className="businesses-index-header">
-        {/* <Link to={`/businesses/${business.id}`}> */}
+        <Link to={`/businesses/${business.id}`}>
           <ul className="biz-index-ul">
-            <div className="biz-photo"></div>
+            <div className="biz-photo">
+
+            </div>
             <li className="biz-details">
               <div className="biz-name">{business.name}</div>
               <div className="biz-category">{business.category}</div>
@@ -35,13 +37,13 @@ class BusinessIndexItem extends React.Component {
               </div>
               <div className="for-outdoor">
                 <FontAwesomeIcon
-                  icon={faCheck}
+                  icon={faTimes}
                   fixedWidth
                 />
                 <span>Outdoor Seating</span>
               </div>
               <div className="contact-methods">
-                <div className="biz-phone">{business.phone_umber}</div>
+                <div className="biz-phone">{business.phone_number}</div>
                 <div className="whole-address">
                   <div className="street-address">{business.address}</div>
                   <div className="regional-address">
@@ -52,7 +54,7 @@ class BusinessIndexItem extends React.Component {
               </div>
             </li>
           </ul>
-        {/* </Link> */}
+        </Link>
       </div>
     );
   }

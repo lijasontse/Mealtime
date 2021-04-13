@@ -12,7 +12,7 @@ class BusinessIndex extends React.Component {
     const { businesses, fetchBusinesses } = this.props;
 
     return (
-      <div className="biz-index-page">
+      <div>
         <NavBarContainer />
         <div className="business-main">
           <ul className="business-un-list">
