@@ -86,7 +86,3 @@ ActiveRecord::Base
     lng: -122.42576200949073,
     owner_id: 2
   )
-
-  Business.all.each_with_index do |business, i|
-    business.file = open
-  end
