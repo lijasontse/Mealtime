@@ -1,0 +1,35 @@
+.biz-index-ul {
+  display: flex;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  margin-top: 16px;
+  margin-left: 30px;
+  width: 775px;
+}
+
+.biz-photo > img {
+  width: 235px;
+  height: 193px;
+  margin-top: 12px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.results-tag {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+.biz-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-left: 25px;
+}
+
+.biz-name {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}

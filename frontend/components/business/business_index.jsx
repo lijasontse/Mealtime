@@ -16,15 +16,17 @@ class BusinessIndex extends React.Component {
         <NavBarContainer />
         <div className="business-main">
           <ul className="business-un-list">
-            <div className="business-index-item">
-              {
-                businesses.map((business) => <BusinessIndexItem
-                  business={business}
-                  fetchBusinesses={fetchBusinesses}
-                  key={business.id}
-                />)
-              }
-            </div>
+            <div className="results-tag">All Results</div>
+              <div className="business-index-item">
+                {
+                  businesses.map((business, idx) => <BusinessIndexItem
+                    business={business}
+                    idx={idx}
+                    fetchBusinesses={fetchBusinesses}
+                    key={business.id}
+                  />)
+                }
+              </div>
           </ul>
         </div>
       </div>
