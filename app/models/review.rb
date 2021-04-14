@@ -6,7 +6,7 @@ class Review < ApplicationRecord
     message: "To submit your review, please select a star rating for this business.",
   }
   validates :rating, inclusion: { 
-    in: (1..5),
+    in: (1..5).to_a,
     message: "Please choose a star rating between 1 to 5",
   }
 

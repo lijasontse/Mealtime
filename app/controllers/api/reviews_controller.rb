@@ -1,5 +1,7 @@
 class Api::ReviewsController < ApplicationController
   
+  before_action :require_logged_in, only: [:create, :update, :destroy]
+
   def index
     @reviews = Review.all
     render :index
@@ -23,12 +25,12 @@ class Api::ReviewsController < ApplicationController
     if @review && @review.update(review_params)
       render :show
     else
-      render json: ['Cannot update this review'], status: 422
+      render json: @review.errors.full_messages, status: 422
     end
   end
 
   def destroy
-    @review = current_user.review.find_by(id: params[:id])
+    @review = current_user.reviews.find_by(id: params[:id])
     if @review && @review.destroy
       render :show
     else
