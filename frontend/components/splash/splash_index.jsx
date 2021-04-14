@@ -46,7 +46,7 @@ class SplashIndex extends React.Component {
         <div className="mt-splash-logo">
           <div className="sp-all-navs">
             <div className="sp-left-nav">
-              <Link to="/businesses" className="businesses-index-tag">Businesses</Link>
+              <Link to="/businesses" className="businesses-index-tag">Write a Review</Link>
             </div>
             <div className="sp-right-nav">
               {spDisplay}
