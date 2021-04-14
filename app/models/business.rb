@@ -7,6 +7,10 @@ class Business < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
   
+  has_many :reviews,
+    foreign_key: :business_id,
+    class_name: :Review
+
   has_one_attached :photo
   has_many_attached :photos
   

@@ -13,6 +13,10 @@ class User < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :Business
 
+  has_many :reviews,
+    foreign_key: :author_id,
+    class_name: :Review
+
   def reset_session_token!
     self.session_token = SecureRandom.urlsafe_base64
     self.save!
