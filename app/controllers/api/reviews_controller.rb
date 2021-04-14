@@ -5,6 +5,10 @@ class Api::ReviewsController < ApplicationController
     render :index
   end
 
+  def show
+    @review = Review.find(params[:id])
+  end
+
   def create
     @review = Review.new(review_params)
     if @review.save
@@ -35,6 +39,6 @@ class Api::ReviewsController < ApplicationController
   private
   def review_params
     params.require(:review).permit(
-      :business_id, :body, :rating)
+      :author_id, :business_id, :body, :rating)
   end
 end
