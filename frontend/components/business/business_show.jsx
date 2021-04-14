@@ -37,94 +37,102 @@ class BusinessShow extends React.Component {
                 <div className="biz-show-claimed">
                   <FontAwesomeIcon
                     icon={faCheckCircle}
+                    color="Dodgerblue"
                     fixedWidth
                   />
-                  <span>Claimed</span>
+                  <span>&nbsp;Claimed &nbsp;</span>
                 </div>
+                <div className="first-bullet">&#8226;</div>
                 <div className="biz-show-category">{business.category}</div>
               </li>
             </div>
         </div>
         <div className="biz-show-review">Write a Review</div>
         <ul className="biz-show-body">
-          <li className="covid-update">Covid-19 Updates
-            <div className="updated-service-title">Updated Services
-              <div className="covid-delivery">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  fixedWidth
-                />
-                <span>Delivery</span>
-              </div>
-              <div className="covid-takeout">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  fixedWidth
-                />
-                <span>Takeout</span>
-              </div>
-              <div className="covid-seating">
-                <FontAwesomeIcon
-                  icon={faTimes}
-                  fixedWidth
-                />
-                <span>Outdoor Seating</span>
-              </div>
+          <div className="covid-update">Covid-19 Updates</div>
+          <div className="updated-service-title">Updated Services</div>
+          <div className="updated-service-body">
+            <div className="covid-delivery">
+              <FontAwesomeIcon
+                icon={faCheck}
+                fixedWidth
+                color="green"
+              />
+              <span>&nbsp;Delivery&nbsp;</span>
             </div>
-            <div className="health-safety-title">Health &#38; Safety Measures
-              <div className="social-distance-tag">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  fixedWidth
-                />
-                <span>Social distancing enforced</span>
-              </div>
-              <div className="wear-mask-tag">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  fixedWidth
-                />
-                <span>Staff wears masks</span>
-              </div>
-              <div className="mask-required-tag">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  fixedWidth
-                />
-                <span>Masks required</span>
-              </div>
+            <div className="covid-takeout">
+              <FontAwesomeIcon
+                icon={faCheck}
+                fixedWidth
+                color="green"
+              />
+              <span>&nbsp;Takeout&nbsp;</span>
             </div>
-          </li>
-          <li className="location-hour-title">Locaion &#38; Hours
+            <div className="covid-seating">
+              <FontAwesomeIcon
+                icon={faTimes}
+                fixedWidth
+                color="red"
+              />
+              <span>&nbsp;Outdoor Seating</span>
+            </div>
+          </div>
+          <div className="health-safety-title">Health &#38; Safety Measures</div>
+          <div className="health-safety-body">
+            <div className="social-distance-tag">
+              <FontAwesomeIcon
+                icon={faCheck}
+                fixedWidth
+                color="green"
+              />
+              <span>&nbsp;Social distancing enforced&nbsp;</span>
+            </div>
+            <div className="wear-mask-tag">
+              <FontAwesomeIcon
+                icon={faCheck}
+                fixedWidth
+                color="green"
+              />
+              <span>&nbsp;Staff wears masks&nbsp;</span>
+            </div>
+            <div className="mask-required-tag">
+              <FontAwesomeIcon
+                icon={faCheck}
+                fixedWidth
+                color="green"
+              />
+              <span>&nbsp;Masks required</span>
+            </div>
+          </div>
+          <li className="location-hour-title">Locaion &#38; Hours</li>
             <div className="date-time-tag">
-              <div className="show-day-tag">Mon</div>
+              <div className="show-day-tag">Mon&nbsp;&nbsp;&nbsp;</div>
               <div className="show-time-tag">11:00AM - 9:00PM</div>
             </div>
             <div className="date-time-tag">
-              <div className="show-day-tag">Tues</div>
+              <div className="show-day-tag">Tues&nbsp;&nbsp;&nbsp;</div>
               <div className="show-time-tag">11:00AM - 9:00PM</div>
             </div>
             <div className="date-time-tag">
-              <div className="show-day-tag">Wed</div>
+              <div className="show-day-tag">Wed&nbsp;&nbsp;&nbsp;</div>
               <div className="show-time-tag">11:00AM - 9:00PM</div>
             </div>
             <div className="date-time-tag">
-              <div className="show-day-tag">Thu</div>
+              <div className="show-day-tag">Thu&nbsp;&nbsp;&nbsp;</div>
               <div className="show-time-tag">11:00AM - 9:00PM</div>
             </div>
             <div className="date-time-tag">
-              <div className="show-day-tag">Fri</div>
+              <div className="show-day-tag">Fri&nbsp;&nbsp;&nbsp;</div>
               <div className="show-time-tag">11:00AM - 9:30PM</div>
             </div>
             <div className="date-time-tag">
-              <div className="show-day-tag">Sat</div>
+              <div className="show-day-tag">Sat&nbsp;&nbsp;&nbsp;</div>
               <div className="show-time-tag">11:00AM - 9:30PM</div>
             </div>
             <div className="date-time-tag">
-              <div className="show-day-tag">Sun</div>
+              <div className="show-day-tag">Sun&nbsp;&nbsp;&nbsp;</div>
               <div className="show-time-tag">11:00AM - 9:00PM</div>
             </div>
-          </li>
         </ul>
       </div>
     );

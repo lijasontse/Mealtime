@@ -1,4 +1,105 @@
 .biz-show-ul {
   display: flex;
+  
 }
 
+.biz-show-ul img {
+  width: 100%;
+  height: 100%;
+}
+
+.show-top-info {
+  margin-top: -100px;
+  margin-left: 325px;
+}
+
+.biz-show-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  color: #fff;
+}
+
+.biz-show-details {
+  display: flex;
+  margin-top: -10px;
+}
+
+.biz-show-claimed {
+  font-family: 'Open Sans', sans-serif;
+  color: dodgerblue;
+  font-weight: 500px;
+}
+
+.first-bullet {
+  color: #fff;
+}
+
+.biz-show-category {
+  margin-left: 10px;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+.biz-show-review {
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: #d32323;
+  padding: 5px 15px;
+  color: #fff;
+  width: fit-content;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: 325px;
+}
+
+.biz-show-body {
+  border-top: 2px solid lightgrey;
+  margin-left: 325px;
+  margin-right: 325px;
+}
+
+.covid-update {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.updated-service-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.updated-service-body {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.health-safety-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.health-safety-body {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.location-hour-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.date-time-tag {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
