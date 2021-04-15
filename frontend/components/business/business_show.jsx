@@ -49,7 +49,7 @@ class BusinessShow extends React.Component {
               </li>
             </div>
         </div>
-        <div className="biz-show-review">Write a Review</div>
+        <div className="biz-show-review"><Link to={`/businesses/${business.id}/newreview`}>Write a Review</Link></div>
         <ul className="biz-show-body">
           <div className="covid-update">Covid-19 Updates</div>
           <div className="updated-service-title">Updated Services</div>

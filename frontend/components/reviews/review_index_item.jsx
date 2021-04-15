@@ -8,14 +8,12 @@ class ReviewIndexItem extends React.Component {
   constructor(props) {
     super(props);
     
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   handleDelete() {
-    return e => {
-      e.preventDefault();
-      this.props.deleteReview(this.props.reviewId)
-        .then(window.location.reload())
-    };
+    this.props.deleteReview(this.props.review.id)
+      .then(window.location.reload())
   };
 
   buttonVisible() {
@@ -24,7 +22,7 @@ class ReviewIndexItem extends React.Component {
         <div className="edit-delete-review">
           <div className="toggle-icon">
             <button className="edit-btn"><Link to={`/reviews/${this.props.review.business_id}/edit`}>Edit</Link></button>
-            <button className="delete-btn" onClick={this.handleDelete()}>Delete</button>
+            <button className="delete-btn" onClick={this.handleDelete}>Delete</button>
             <div className="ellipsis-icon">
               <FontAwesomeIcon
                 icon={faEllipsisH}
@@ -38,7 +36,6 @@ class ReviewIndexItem extends React.Component {
 
   render() {
     const { review } = this.props;
-
     return (
       <div className="review-index-item">
         <div className="reviews-info">
