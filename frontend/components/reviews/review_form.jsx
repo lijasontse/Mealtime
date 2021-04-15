@@ -15,6 +15,7 @@ class ReviewForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
+    // this.renderErrors = this.renderErrors.bind(this);
   }
 
 
@@ -36,9 +37,10 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const navigate = this.navigateToBusinessShow.bind(this);
     const review = Object.assign({}, this.state);
-    this.props.createReview(review);
-    this.navigateToBusinessShow();
+    this.props.createReview(review)
+      .then(() => navigate());
   }
 
 
@@ -93,7 +95,7 @@ class ReviewForm extends React.Component {
                 experience, but delivery is a great second option right now. The food was a little
                 cold, but I understand this is a new operation for them..."
               />
-              <div className="review-errors">{this.renderErrors()}</div>
+              {this.renderErrors()}
               <button className="review-form-submit">Post Review</button>
             </form>
           </div>
