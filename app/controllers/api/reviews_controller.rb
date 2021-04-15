@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
   
-  before_action :require_logged_in, only: [:create, :update, :destroy]
+  before_action :require_logged_in, only: [:create, :show, :update, :destroy]
 
   def index
     @reviews = Review.all
@@ -9,10 +9,12 @@ class Api::ReviewsController < ApplicationController
 
   def show
     @review = Review.find(params[:id])
+    render :show
   end
 
   def create
     @review = Review.new(review_params)
+    @review.author_id = current_user.id
     if @review.save
       render :show
     else
@@ -21,7 +23,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    @review = current_user.reviews.find_by(id: params[:id])
+    @review = Review.find_by(id: params[:id])
     if @review && @review.update(review_params)
       render :show
     else
@@ -30,12 +32,10 @@ class Api::ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = current_user.reviews.find_by(id: params[:id])
-    if @review && @review.destroy
-      render :show
-    else
-      render json: ['You cannot delete this review'], status: 422
-    end
+    @review = Review.find(params[:id])
+    @review.destroy
+
+    render :show
   end
 
   private
@@ -43,4 +43,5 @@ class Api::ReviewsController < ApplicationController
     params.require(:review).permit(
       :author_id, :business_id, :body, :rating)
   end
+  
 end

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NavBarContainer from '../navbar/navbar_container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import ReviewIndexContainer from '../reviews/review_index_container';
 
 class BusinessShow extends React.Component {
   constructor(props) {
@@ -16,10 +17,9 @@ class BusinessShow extends React.Component {
   }
 
   render() {
-    const { business, photoUrls } = this.props;
+    const { business, reviews, photoUrls } = this.props;
 
     if (!business) return <h1>Loading...</h1>
-            
     return (
       <div>
         <NavBarContainer />
@@ -136,6 +136,12 @@ class BusinessShow extends React.Component {
               <div className="show-time-tag">11:00AM - 9:00PM</div>
             </div>
         </ul>
+        <div>
+          <ReviewIndexContainer 
+            users={this.props.users}
+            reviews={reviews}
+          />
+        </div>
       </div>
     );
   }

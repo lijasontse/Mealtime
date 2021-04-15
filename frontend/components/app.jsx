@@ -8,6 +8,7 @@ import { AuthRoute } from '../util/route_util';
 import SplashContainer from './splash/splash_container';
 import BusinessIndexContainer from './business/business_index_container';
 import BusinessShowContainer from './business/business_show_container';
+import ReviewIndexContainer from './reviews/review_index_container';
 
 const App = () => (
   <div>
@@ -16,6 +17,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <Route exact path="/businesses" component={BusinessIndexContainer}/>
       <Route exact path="/businesses/:businessId" component={BusinessShowContainer}/>
+      <Route exact path="/reviews" component={ReviewIndexContainer}/>
       <Route exact path="/" component={SplashContainer}/>
       <Route component={errorPage}/>
     </Switch>

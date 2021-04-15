@@ -1,14 +1,7 @@
 class Review < ApplicationRecord
 
-  validates :author_id, presence: true
-  validates :author_id, presence: true, uniqueness: {scope: :business_id}
-  validates :body, presence: {
-    message: "To submit your review, please select a star rating for this business.",
-  }
-  validates :rating, inclusion: { 
-    in: (1..5).to_a,
-    message: "Please choose a star rating between 1 to 5",
-  }
+  validates :author_id, :body, :rating, :business_id, presence: true
+  validates :rating, inclusion: { in: (1..5).to_a }
 
   belongs_to :author,
     foreign_key: :author_id,

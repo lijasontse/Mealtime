@@ -10,6 +10,7 @@ require 'open-uri'
 
 User.destroy_all
 Business.destroy_all
+Review.destroy_all
 
 ActiveRecord::Base
   .connection
@@ -122,3 +123,24 @@ ActiveRecord::Base
   biz3.photos.attach(io: picShow3c, filename: 'biz3d.png')
   picShow3d = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz3e.png')
   biz3.photos.attach(io: picShow3d, filename: 'biz3e.png')
+
+  r1 = Review.create!(
+    author_id: 1,
+    body: "Best Dumplings ever, I also love the hand pulled noodles! Highly recommend this spot.",
+    rating: 5,
+    business_id: 1
+  )
+
+  r2 = Review.create!(
+  author_id: 2,
+  body: "Awesome Thai food spot in Miami! Must try!",
+  rating: 3,
+  business_id: 2
+  )
+
+  r3 = Review.create!(
+  author_id: 3,
+  body: "I love ice cream, and I scream for ice cream!!!",
+  rating: 4,
+  business_id: 3
+  )
