@@ -7,8 +7,8 @@ Check it out here! [_Meal time_](https://meal-time-jason.herokuapp.com/#/).
 Feel free to try out the mentioned features with the handy dandy Demo User Login.
 
 # Below are the languages and programs I used for this project: 
-## For the backend, I used Ruby on Rails, PostgreSQL, jBuilder, and AWS S3. 
-## For the frontend, I used JavaScript, React, Redux, FontAwesome, CSS, and will use Google Maps API as I progress. 
+For the backend, I used Ruby on Rails, PostgreSQL, jBuilder, and AWS S3. 
+For the frontend, I used JavaScript, React, Redux, FontAwesome, CSS, and will use Google Maps API as I progress. 
 
 Things you may want to cover:
 
