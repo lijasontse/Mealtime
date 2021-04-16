@@ -1,7 +1,9 @@
 # README
+![MTIME](https://github.com/lijasontse/Mealtime/blob/main/app/assets/images/mtlogo1.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Meal time is a full stack clone of Yelp and right now it is live! 
+(but not fully completed). Check it out here! [_Meal time_](https://meal-time-jason.herokuapp.com/#/).
+
 
 Things you may want to cover:
 
