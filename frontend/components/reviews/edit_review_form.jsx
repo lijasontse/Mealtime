@@ -1,33 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
 import NavBarContainer from '../navbar/navbar_container';
 
-class ReviewForm extends React.Component {
+class EditReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      author_id: this.props.currentUser,
-      business_id: this.props.businessId,
       body: '',
-      rating: ''
-    };
+      rating: '',
+      author_id: '',
+      business_id: '',
+      id: ''
+    }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
-    // this.renderErrors = this.renderErrors.bind(this);
   }
-
-
-  componentDidMount() {
-    this.props.fetchBusiness(this.props.match.params.businessId)
-  }
-
 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  componentDidMount() {
+    this.props.fetchBusiness(this.props.match.params.businessId)
+    this.props.fetchReview(this.props.match.params.reviewId)
+      .then(() => {
+        this.setState({
+          body: this.props.review ? this.props.review.body : "",
+          rating: this.props.review ? this.props.review.rating : "",
+          author_id: this.props.currentUser ? parseInt(this.props.currentUser) : "",
+          business_id: this.props.match.params.businessId ? parseInt(this.props.match.params.businessId) : "",
+          id: this.props.match.params.reviewId ? parseInt(this.props.match.params.reviewId) : ""
+        })
+      })
   }
 
   navigateToBusinessShow() {
@@ -39,14 +46,13 @@ class ReviewForm extends React.Component {
     e.preventDefault();
     const navigate = this.navigateToBusinessShow.bind(this);
     const review = Object.assign({}, this.state);
-    this.props.createReview(review)
+    this.props.updateReview(review)
       .then(() => navigate());
   }
 
-
   renderErrors() {
     return (
-      <ul className="review-form-error"> 
+      <ul className="review-form-error">
         {this.props.errors.map((error, i) => (
           <li className="review-error review-alert-error" key={`error-${i}`}>
             {error}
@@ -57,7 +63,6 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-
     const { business } = this.props;
     if (!business) return <h1>Loading...</h1>
     return (
@@ -75,36 +80,34 @@ class ReviewForm extends React.Component {
               <div className="review-ratings">
                 <div id="rating-stars" className="review-stars">Select your rating</div>
                 <label className="star-label">
-                  <input 
-                    type="number" 
+                  <input
+                    type="number"
                     min="1"
                     max="5"
-                    value={this.state.rating} 
+                    value={this.state.rating}
                     onChange={this.update('rating')}
                   />
                 </label>
               </div>
-              <textarea 
+              <textarea
                 className="review-form-inputs"
-                value={this.state.body} 
-                onChange={this.update('body')} 
-                cols="75" 
-                rows="26"
+                value={this.state.body}
+                onChange={this.update('body')}
+                cols="60"
+                rows="25"
                 placeholder="This spot is serving meal kits, as well as offering
                 delivery during COVID. I'm so glad! Of course nothing beats the in-person
                 experience, but delivery is a great second option right now. The food was a little
                 cold, but I understand this is a new operation for them..."
               />
               {this.renderErrors()}
-              <button className="review-form-submit">Post Review</button>
+              <button className="review-form-submit">Update Review</button>
             </form>
           </div>
         </div>
       </div>
     )
   }
-
-
 }
 
-export default ReviewForm;
+export default EditReviewForm;

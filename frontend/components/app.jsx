@@ -9,6 +9,7 @@ import SplashContainer from './splash/splash_container';
 import BusinessIndexContainer from './business/business_index_container';
 import BusinessShowContainer from './business/business_show_container';
 import ReviewFormContainer from './reviews/create_review_form_container';
+import EditReviewFormContainer from './reviews/edit_review_form_container';
 
 const App = () => (
   <div>
@@ -16,6 +17,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
       <ProtectedRoute exact path="/businesses/:businessId/newreview" component={ReviewFormContainer} />
+      <ProtectedRoute exact path="/businesses/:businessId/review/:reviewId/edit" component={EditReviewFormContainer} />
       <Route exact path="/businesses" component={BusinessIndexContainer}/>
       <Route exact path="/businesses/:businessId" component={BusinessShowContainer}/>
       <Route exact path="/" component={SplashContainer}/>

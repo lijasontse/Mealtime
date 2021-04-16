@@ -1,6 +1,5 @@
 .biz-show-ul {
   display: flex;
-  
 }
 
 .biz-show-ul img {
@@ -42,33 +41,39 @@
 
 .biz-show-review {
   font-family: 'Open Sans', sans-serif;
-  border: 1px solid;
   border-radius: 5px;
   background-color: #d32323;
-  padding: 5px 15px;
+  padding: 9px 22px;
   color: #fff;
+  height: fit-content;
   width: fit-content;
   margin-top: 50px;
-  margin-bottom: 30px;
   margin-left: 325px;
 }
+
 
 .biz-show-body {
   border-top: 2px solid lightgrey;
   margin-left: 325px;
   margin-right: 325px;
+  display: flex;
+  flex-direction: column-reverse;
+  position: absolute;
+  width: 42%;
+  margin-top: -145px;
 }
+
 
 .covid-update {
   margin-top: 30px;
   margin-bottom: 30px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .updated-service-title {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .updated-service-body {
@@ -76,30 +81,95 @@
   margin-top: 30px;
   margin-bottom: 30px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  justify-content: space-evenly;
 }
 
 .health-safety-title {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .health-safety-body {
   display: flex;
+  justify-content: space-evenly;
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .location-hour-title {
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 30px;
 }
 
-.date-time-tag {
+.date-time-all {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+}
+
+.date-tag {
+  margin-right: -170px
+}
+
+.right-biz-show {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-right: 325px;
+  width: 370px;
+  height: 190px;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+}
+
+.right-biz-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 190px;
+}
+
+.biz-show-mid {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.right-biz-info > * {
+  margin-left: 20px;
+  font-family: 'Open Sans', sans-serif;
+  width: 90%;
+}
+
+.biz-show-get-dir-tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.biz-show-website {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.web-url {
+  color: rgba(0,131,143,1);
+}
+
+.biz-show-num {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.dir-tag {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0,131,143,1);
 }

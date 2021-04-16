@@ -5,7 +5,7 @@ export const fetchReviews = () => (
 );
 
 export const fetchReview = reviewId => (
-  $,ajax({
+  $.ajax({
     url: `/api/reviews/${reviewId}`
   })
 );
@@ -22,7 +22,7 @@ export const updateReview = review => (
   $.ajax({
     method: 'PATCH',
     url: `/api/reviews/${review.id}`,
-    method: { review }
+    data: { review }
   })
 );
 

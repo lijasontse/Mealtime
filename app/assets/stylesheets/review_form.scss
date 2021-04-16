@@ -1,0 +1,42 @@
+.review-form-all {
+  max-width: 625px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.review-form-biz-name {
+  font-family: 'Roboto', sans-serif;
+  padding-top: 36px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 622px;
+}
+
+.biz-name-link {
+  font-size: 34px;
+}
+
+.form-guideline {
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0,131,143,1);
+}
+
+.review-box {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  height: 400px;
+  width: 630px;
+}
+
+.rating-msg {
+  color: #757280;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  position: relative;
+  left: 215px;
+  top: 40px
+}
+

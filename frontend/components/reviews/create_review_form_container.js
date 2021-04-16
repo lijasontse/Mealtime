@@ -9,10 +9,6 @@ const mapStateToProps = (state, ownProps) => ({
   businessId: ownProps.match.params.businessId,
   currentUser: state.session.id,
   errors: state.errors.review,
-  review: {
-    body: '',
-    rating: 0
-  },
   formType: 'Create Review'
 
 });

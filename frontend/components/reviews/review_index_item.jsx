@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisH, faUserNinja } from '@fortawesome/free-solid-svg-icons';
 
 class ReviewIndexItem extends React.Component {
   constructor(props) {
@@ -20,15 +20,15 @@ class ReviewIndexItem extends React.Component {
     if (this.props.currentUser === this.props.review.reviewerId) 
       return (
         <div className="edit-delete-review">
+          <div className="ellipsis-icon">
+            <FontAwesomeIcon
+              icon={faEllipsisH}
+              size="lg"
+            />
+          </div>
           <div className="toggle-icon">
-            <button className="edit-btn"><Link to={`/reviews/${this.props.review.business_id}/edit`}>Edit</Link></button>
-            <button className="delete-btn" onClick={this.handleDelete}>Delete</button>
-            <div className="ellipsis-icon">
-              <FontAwesomeIcon
-                icon={faEllipsisH}
-                fixedWidth
-              />
-            </div>
+            <button className="edit-btn"><Link to={`/businesses/${this.props.review.business_id}/review/${this.props.review.id}/edit`}>Edit Review</Link></button>
+            <button className="delete-btn" onClick={this.handleDelete}>Remove Review</button>
           </div>
         </div>
       );
@@ -43,7 +43,15 @@ class ReviewIndexItem extends React.Component {
             {/* <img src={review.photoUrl} /> */}
           </div>
           <div className="review-details">
-            <div className="reviewer-name">{review.reviewerFirstName}&nbsp;{review.reviewerLastName}</div>
+            <div className="reviewer-names">
+              <FontAwesomeIcon
+                icon={faUserNinja}
+                size="2x"
+                color="#fff"
+              />
+              <span className="one-reviewer">{review.reviewerFirstName}&nbsp;{review.reviewerLastName}</span>
+            </div>
+            <div className="reviewer-rating">{review.rating}</div>
             <p className="review-body">{review.body}</p>
           </div>
         </div>

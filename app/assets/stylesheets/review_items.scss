@@ -1,0 +1,54 @@
+.reviews-tag {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+}
+
+.review-index-item {
+  
+}
+
+.reviewer-names {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+.one-reviewer {
+  margin-left: 20px;
+}
+
+.review-body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-align: left;
+  color: rgb(62, 61, 61);
+  margin-bottom: 15px;
+}
+
+.toggle-icon {
+  float: right;
+}
+
+
+.ellipsis-icon {
+  margin-left: 20px;
+  float: right;
+}
+
+.reviewer-names > svg {
+  background-color: #d32323;
+  width: 50px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  vertical-align: middle;
+  padding: 15px;
+}
+
+.reviewer-rating {
+  color: #d32323;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
