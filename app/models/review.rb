@@ -1,7 +1,7 @@
 class Review < ApplicationRecord
 
   validates :author_id, :body, :rating, :business_id, presence: true
-  validates :rating, inclusion: { in: (1..5).to_a }
+  validates :rating, inclusion: { in: (1..5) }
 
   belongs_to :author,
     foreign_key: :author_id,
