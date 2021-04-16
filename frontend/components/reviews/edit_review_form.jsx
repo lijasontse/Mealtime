@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBarContainer from '../navbar/navbar_container';
+import Rating from 'react-rating';
 
 class EditReviewForm extends React.Component {
   constructor(props) {
@@ -15,6 +16,8 @@ class EditReviewForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToBusinessShow = this.navigateToBusinessShow.bind(this);
+    this.handleHover = this.handleHover.bind(this);
+    this.ratingChanged = this.ratingChanged.bind(this);
   }
 
   update(field) {
@@ -50,6 +53,27 @@ class EditReviewForm extends React.Component {
       .then(() => navigate());
   }
 
+  ratingChanged(newRating) {
+    this.setState({ rating: newRating });
+  }
+
+  handleHover() {
+    switch (this.state.rating) {
+      case 1:
+        return <p id="rating-message">Not good</p>;
+      case 2:
+        return <p id="rating-message">Could've been better</p>;
+      case 3:
+        return <p id="rating-message">OK</p>;
+      case 4:
+        return <p id="rating-message">Good</p>;
+      case 5:
+        return <p id="rating-message">Great!</p>;
+      default:
+        return <p id="rating-message">Select your rating</p>;
+    }
+  }
+
   renderErrors() {
     return (
       <ul className="review-form-error">
@@ -69,37 +93,34 @@ class EditReviewForm extends React.Component {
       <div>
         <NavBarContainer />
         <div className="review-form-all">
-          <div className="review-form-biz-name">
-            <Link to={`/businesses/${business.id}`} className="biz-name-link">
-              {business.name}
-            </Link>
-            <span className="form-guideline">Read our review guidelines.</span>
-          </div>
           <div className="review-form-main">
             <form onSubmit={this.handleSubmit} className="review-form-box">
-              <div className="review-ratings">
-                <div id="rating-stars" className="review-stars">Select your rating</div>
-                <label className="star-label">
-                  <input
-                    type="number"
-                    min="1"
-                    max="5"
-                    value={this.state.rating}
-                    onChange={this.update('rating')}
-                  />
-                </label>
+              <div className="review-form-biz-name">
+                <Link to={`/businesses/${business.id}`} className="biz-name-link">
+                  {business.name}
+                </Link>
+                <span className="form-guideline">Read our review guidelines.</span>
               </div>
-              <textarea
-                className="review-form-inputs"
-                value={this.state.body}
-                onChange={this.update('body')}
-                cols="60"
-                rows="25"
-                placeholder="This spot is serving meal kits, as well as offering
-                delivery during COVID. I'm so glad! Of course nothing beats the in-person
-                experience, but delivery is a great second option right now. The food was a little
-                cold, but I understand this is a new operation for them..."
-              />
+              <div className="review-ratings">
+                <div className="rating-msg">{this.handleHover()}</div>
+                <Rating
+                  emptySymbol="fa fa-star fa-lg un-filled"
+                  initialRating={this.state.rating}
+                  fullSymbol="fa fa-star fa-lg filled"
+                  onChange={this.ratingChanged}
+                  className="plz-work-rating"
+                  onHover={this.handleHover}
+                />
+                <textarea
+                  className="review-form-inputs"
+                  value={this.state.body}
+                  onChange={this.update('body')}
+                  placeholder="This spot is serving meal kits, as well as offering
+                  delivery during COVID. I'm so glad! Of course nothing beats the in-person
+                  experience, but delivery is a great second option right now. The food was a little
+                  cold, but I understand this is a new operation for them..."
+                />
+              </div>
               {this.renderErrors()}
               <button className="review-form-submit">Update Review</button>
             </form>

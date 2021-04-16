@@ -10,8 +10,8 @@
   padding-bottom: 24px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  width: 622px;
+  align-items: center;
+  width: 632px;
 }
 
 .biz-name-link {
@@ -24,11 +24,12 @@
   color: rgba(0,131,143,1);
 }
 
-.review-box {
+.review-ratings {
   border: 1px solid #bdbdbd;
-  border-radius: 5px;
+  border-radius: 6px;
   height: 400px;
   width: 630px;
+  margin-bottom: 40px;
 }
 
 .rating-msg {
@@ -36,7 +37,59 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   position: relative;
-  left: 215px;
-  top: 40px
+  left: 250px;
+  top: 31px;
 }
 
+.plz-work-rating {
+  margin-left: 25px;
+  margin-top: 3px;
+}
+
+.un-filled {
+  background-color: #757280;
+  color: #fff;
+  margin-right: 0.5px;
+  padding: 10px 6px;
+  border-radius: 7px;
+  opacity: 0.2;
+}
+
+.filled {
+  background-color: #d32323;
+  color: #fff;
+  margin-right: 0.5px;
+  padding: 10px 6px;
+  border-radius: 7px;
+}
+
+
+textarea {
+  resize: none;
+  width: 570px;
+  height: 300px;
+  border: none;
+  outline: none;
+  margin: 25px;
+}
+
+.fa-star {
+  margin-left: 5px;
+}
+
+textarea::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+.review-form-submit {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+  background-color: #d32323;
+  padding: 9px 52px;
+  color: #fff;
+  box-shadow: none;
+  border: 2px solid #fff;
+  font-size: 16px;
+
+}

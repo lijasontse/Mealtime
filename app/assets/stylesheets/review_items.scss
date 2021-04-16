@@ -24,7 +24,32 @@
 
 .toggle-icon {
   float: right;
+  display: flex;
+  flex-direction: column;
 }
+
+.edit-btn {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+  background-color: #d32323;
+  padding: 9px 13px;
+  color: #fff;
+  box-shadow: none;
+  border: 2px solid #fff;
+  font-size: 13px;
+}
+
+.delete-btn {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+  background-color: #d32323;
+  padding: 9px 13px;
+  color: #fff;
+  box-shadow: none;
+  border: 2px solid #fff;
+  font-size: 13px;
+}
+
 
 
 .ellipsis-icon {

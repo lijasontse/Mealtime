@@ -60,20 +60,12 @@ q:before, q:after {
 	content: none;
 }
 
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1800px;
+}
 
 img {
-	width: 100%;
-	height: auto;
-	border-style: none;
-	text-decoration: none;
-	outline: none;
-}
-
-
-.style-rating {
-	color: red;
-}
-
-textarea {
-	resize: none;
+	display: block;
 }
