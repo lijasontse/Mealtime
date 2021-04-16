@@ -1,6 +1,6 @@
 ![MTIME](https://github.com/lijasontse/Mealtime/blob/main/app/assets/images/mtlogo1.png)
 
-Meal time is a full stack clone of Yelp and right now it is live! Although it isn't fully completed yet, I have created the major functionalities of what a Yelp clone should have. As of right now, I have the functionalities of User's Auth, rendering all Businesses and showing a specific business that is seeded in the database, and also the ability of creating, editing, and deleting reviews. 
+Meal time is a full stack clone of Yelp and right now it is live! I have created the major functionalities of what a Yelp clone should have. As of right now, I have the functionalities of user's auths, rendering all businesses and showing a specific business that is seeded in the database, and also the ability of creating, editing, and deleting reviews. 
 
 Check it out here! [_Meal time_](https://meal-time-jason.herokuapp.com/#/). 
 
