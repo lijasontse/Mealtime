@@ -141,7 +141,7 @@ class BusinessShow extends React.Component {
                 <span>&nbsp;Masks required</span>
               </div>
             </div>
-            <li className="location-hour-title">Locaion &#38; Hours</li>
+            <li className="location-hour-title">Location &#38; Hours</li>
             <div className="date-time-all">
               <div className="date-tag">
                 <div className="show-day-tag">Mon</div>
