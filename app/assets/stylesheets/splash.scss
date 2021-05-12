@@ -25,18 +25,17 @@
   cursor: default;
 }
 
-
 .splash-index {
-  margin: 440px;
+  margin: 30px;
 }
-
 
 .splash-title {
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   font-family: 'Open Sans', sans-serif;
   color: #d32323;
+  font-size: 18px;
 }
 
 .splash-biz {
@@ -45,7 +44,7 @@
 }
 
 .biz-pic {
-  width: 295px;
+  width: 300px;
   height: 250px;
   margin: 0 18px 0 18px;
   border: 1px solid #999;
@@ -56,7 +55,8 @@
   text-align: center;
   margin-top: 10px;
   font-family: 'Open Sans', sans-serif;
-  color: #0073bb;;
+  color: #0073bb;
+  font-size: 16px;
 }
 
 .sp-all-navs {
@@ -98,7 +98,7 @@
   border-radius: 5px;
   border: 2px solid #fff;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   box-sizing: border-box;
   transition: background-color 0.3s;
@@ -123,7 +123,6 @@
   cursor: pointer;
   margin-left: 425px;
 }
-
 
 .sp-left-nav:hover {
   text-decoration: underline;
@@ -201,5 +200,49 @@
 
 .sp-logout:hover {
   color: #0073bb;
+}
+
+.mt-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  border-top: 1px solid #ccc;
+}
+
+.footer-img {
+  width: 650px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.about-links {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.github-icon {
+  margin-right: 10px;
+  color: #d32323;
+}
+
+.github-icon:hover {
+  opacity: 60%;
+}
+
+.linkedin-icon {
+  color: #0073bb;
+}
+
+.linkedin-icon:hover {
+  opacity: 60%;
+}
+
+.angellist-icon {
+  margin-right: 10px;
+}
+
+.angellist-icon:hover {
+  opacity: 60%;
 }
 

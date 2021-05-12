@@ -6,9 +6,12 @@
     <meta property='og:image' content="<%= image_url('mealtime_pic.png') %>"/>
     <meta property="og:description" content="A restaurant-only clone of Yelp created with a Ruby on Rails backend and JavaScript frontend."/>
     <meta property="og:url" content="https://meal-time-jason.herokuapp.com/#/" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <%= csrf_meta_tags %>
@@ -16,6 +19,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag asset_path('leftnavlogo.png')  %>
     <script type="text/javascript">
       window.mealTimeLogo = "<%= image_url('mtlogo1.png') %>";
       window.mealTimeLogo2 = "<%= image_url('mtlogo2.png') %>";
@@ -24,9 +28,14 @@
       window.biz3 = "<%= image_url('biz3.png') %>";
       window.lNavLogo = "<%= image_url('leftnavlogo.png') %>";
       window.star = "<%= image_url('star.png') %>";
+      window.footer = "<%= image_url('footer_cityscape.png') %>";
     </script>
     <script type="text/javascript">
       window.sessionArt = "<%= image_url('sessionsart.png') %>";
+    </script>
+
+    <script 
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn4XpWorE4Mk8Cbk09xlCRPh25Vks8OAA" type="text/javascript">
     </script>
   </head>
 

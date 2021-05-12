@@ -1,16 +1,43 @@
-.biz-show-ul {
-  display: flex;
+.biz-show-header {
+  height: 465px;
 }
 
 
-.biz-show-ul img {
+// .biz-show-ul {
+//   display: flex;
+// }
+
+.biz-show-ul {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  display: inline-flex;
+  background-image: linear-gradient(to bottom, transparent 40%, #000 65%);
+}
+
+.biz-show-ul::after {
+  background-blend-mode: overlay;
+  position: absolute;
+  background-image: linear-gradient(to bottom, transparent 55%, #000 100%);
+  content: "";
   width: 100%;
   height: 100%;
 }
 
+.biz-show-ul img {
+  // width: 100%;
+  // height: 100%;
+  width: 100%;
+  min-width: 400px;
+  height: 100%;
+  opacity: 0.8;
+  object-fit: cover;
+}
+
 .show-top-info {
-  margin-top: -100px;
   margin-left: 325px;
+  position: relative;
+  bottom: 120px;
 }
 
 .biz-show-name {
@@ -44,37 +71,31 @@
   font-family: 'Open Sans', sans-serif;
   border-radius: 5px;
   background-color: #d32323;
-  padding: 9px 22px;
+  margin-bottom: 30px;
   color: #fff;
-  height: fit-content;
-  width: fit-content;
-  margin-top: 50px;
-  margin-left: 325px;
+  // height: 40px;
+  width: 180px;
+  padding: 9px 1px;
+
 }
 
-
-.biz-show-body {
+.line-between {
   border-top: 2px solid lightgrey;
-  margin-left: 325px;
-  margin-right: 325px;
-  display: flex;
-  flex-direction: column-reverse;
-  position: absolute;
-  width: 42%;
-  margin-top: -145px;
+  width: 800px;
 }
-
 
 .covid-update {
   margin-top: 30px;
   margin-bottom: 30px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
+  font-size: 24px;
+  font-weight: 900;
 }
 
 .updated-service-title {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
+  font-weight: 900;
 }
 
 .updated-service-body {
@@ -83,27 +104,38 @@
   margin-bottom: 30px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  justify-content: space-evenly;
+  // justify-content: space-between;
+}
+
+.updated-service-body > div {
+  margin-right: 50px;
 }
 
 .health-safety-title {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
+  font-weight: 900;
 }
 
 .health-safety-body {
   display: flex;
-  justify-content: space-evenly;
+  // justify-content: space-between;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
+.health-safety-body > div {
+  margin-right: 50px;
+}
+
 .location-hour-title {
   font-family: 'Open Sans', sans-serif;
   font-size: 22px;
   margin-bottom: 30px;
+  font-weight: 900;
+
 }
 
 .date-time-all {
@@ -118,44 +150,39 @@
   margin-right: -170px
 }
 
-.right-biz-show {
-  margin-top: 50px;
-  margin-bottom: 30px;
-  margin-right: 325px;
-  width: 370px;
-  height: 190px;
-  border: 1px solid lightgrey;
-  box-sizing: border-box;
-}
 
 .right-biz-info {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 190px;
+  height: 250px;
+  border-top: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  border-radius: 4px;
+  width: 400px;
 }
 
-.biz-show-mid {
-  display: flex;
-  justify-content: space-between;
-}
 
 div.right-biz-info > * {
   margin-left: 20px;
   font-family: 'Open Sans', sans-serif;
-  width: 90%;
+  // width: 90%;
 }
 
 .biz-show-get-dir-tag {
   display: flex;
   flex-direction: column;
+  width: 88%;
 }
 
 .biz-show-website {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
   border-bottom: 1px solid lightgrey;
+  width: 88%;
 }
 
 .web-url {
@@ -165,12 +192,50 @@ div.right-biz-info > * {
 .biz-show-num {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 12px;
+  padding-bottom: 24px;
   border-bottom: 1px solid lightgrey;
+  width: 88%;
 }
+
 
 .dir-tag {
   display: flex;
   justify-content: space-between;
   color: rgba(0,131,143,1);
+}
+
+.biz-show-container {
+  min-width: 1224px;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: -50px;
+  // padding: 0 130px;
+}
+
+.biz-show-mid {
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: top;
+  margin-left: 320px;
+}
+
+.right-biz-show {
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: top;
+  // position: fixed;
+  right: 0;
+  margin-right: 240px;
+  margin-left: 5px;
+}
+
+.write-review-star {
+  padding-right: 10px;
+}
+
+.biz-show-review > a {
+  margin-left: 11px;
 }
