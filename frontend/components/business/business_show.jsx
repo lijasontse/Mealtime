@@ -63,7 +63,7 @@ class BusinessShow extends React.Component {
             <div className="line-between"></div>
             <ul className="biz-show-body">
               <div className="left-show-biz">
-                <div className="covid-update">Covid-19 Updates</div>
+                <div className="covid-update">COVID-19 Updates</div>
                 <div className="updated-service-title">Updated Services</div>
                 <div className="updated-service-body">
                   <div className="covid-delivery">
