@@ -18,30 +18,38 @@ class BusinessIndexItem extends React.Component {
             <div className="biz-photo">
               <img src={business.photoUrl} />
             </div>
-            <li className="biz-details">
-              <div className="biz-name">{idx + 1}. {business.name}</div>
-              <div className="biz-category">{business.category}</div>
-              <div className="for-delivery">
-                <FontAwesomeIcon 
-                  icon={faCheck}
-                  fixedWidth
-                />
-                <span>Delivery</span>
-              </div>
-              <div className="for-takeout">
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  fixedWidth
-                />
-                <span>Takeout</span>
-              </div>
-              <div className="for-outdoor">
-                <FontAwesomeIcon
-                  icon={faTimes}
-                  fixedWidth
-                />
-                <span>Outdoor Seating</span>
-              </div>
+            <div className="biz-index-container">
+              <li className="biz-details">
+                <div className="biz-name">{idx + 1}. {business.name}</div>
+                <div className="biz-category">{business.category}</div>
+                <div className="for-icons">
+                  <div className="for-delivery">
+                    <FontAwesomeIcon 
+                      icon={faCheck}
+                      fixedWidth
+                      color="green"
+                    />
+                    <span>Delivery</span>
+                  </div>
+                  <div className="for-takeout">
+                    <FontAwesomeIcon
+                      icon={faCheck}
+                      fixedWidth
+                      color="green"
+                    />
+                    <span>Takeout</span>
+                  </div>
+                  <div className="for-outdoor">
+                    <FontAwesomeIcon
+                      icon={faTimes}
+                      fixedWidth
+                      color="red"
+                    />
+                    <span>Sit-down dining</span>
+                  </div>
+                </div>
+                <div className="biz-message">"{business.message}"</div>
+              </li>
               <div className="contact-methods">
                 <div className="biz-phone">{business.phone_number}</div>
                 <div className="whole-address">
@@ -52,7 +60,7 @@ class BusinessIndexItem extends React.Component {
                   </div>
                 </div>
               </div>
-            </li>
+            </div>
           </ul>
         </Link>
       </div>

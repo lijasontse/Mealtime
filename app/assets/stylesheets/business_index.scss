@@ -1,19 +1,21 @@
 .biz-index-ul {
   display: flex;
   border: 2px solid lightgrey;
-  border-radius: 5px;
   margin-top: 16px;
   margin-left: 30px;
-  width: 775px;
+  // width: 775px;
   cursor: pointer;
+  &:hover {
+    margin-bottom: 24px;
+    box-shadow: 12px 8px 5px rgba(rgb(186, 184, 184), 0.2), 12px 8px 5px rgba(rgb(186, 184, 184), 0.35),
+      12px 8px 5px rgba(rgb(186, 184, 184), 0.5);
+  }
 }
 
 .biz-photo > img {
   width: 235px;
   height: 193px;
-  margin-top: 12px;
-  margin-left: 20px;
-  margin-bottom: 5px;
+  margin: 20px;
 }
 
 .businesses-index-header > a {
@@ -24,21 +26,90 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   margin-left: 30px;
+  margin-top: 10px;
+  font-weight: 900;
+
 }
 
 .biz-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  margin-left: 25px;
+  // justify-content: center;
+  // align-content: center;
+}
+
+.biz-index-container {
+  display: flex;
+  width: 750px;
+  justify-content: space-between;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 18px;
+}
+
+.contact-methods {
+  margin-right: 20px;
+  font-size: 12px;
+  color: rgb(144, 143, 153);
 }
 
 .biz-name {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.biz-category {
+  // color: rgb(144, 143, 153);
+  margin-top: 10px;
+}
+
+.biz-message {
+  width: 525px;
+  font-size: 14px;
+  color: rgb(144, 143, 153);
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 .businesses-index-header {
-  width: 800px;
+  width: 1000px;
+}
+
+.business-main {
+  display: flex;
+  // align-items: center;
+  margin-bottom: 20px;
+}
+
+.best-intro-tag {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  margin-left: 30px;
+  margin-top: 10px;
+  font-weight: 900;
+}
+
+.for-icons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.for-delivery {
+  margin-right: 10px;
+}
+
+.for-delivery > svg {
+  margin-right: 10px;
+}
+
+.for-takeout {
+  margin-right: 10px;
+}
+
+.for-takeout> svg {
+  margin-right: 10px;
+}
+
+.for-outdoor > svg {
+  margin-right: 10px;
 }

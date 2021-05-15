@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faCheck, faTimes, faExternalLinkAlt, faPhoneAlt, faMapSigns, faStar } from '@fortawesome/free-solid-svg-icons';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import Footer from '../footer/footer';
+import BusinessMap from '../business/business_map';
 
 class BusinessShow extends React.Component {
   constructor(props) {
@@ -64,6 +65,7 @@ class BusinessShow extends React.Component {
             <ul className="biz-show-body">
               <div className="left-show-biz">
                 <div className="covid-update">COVID-19 Updates</div>
+                <div className="biz-cool-message">"{business.message}"</div>
                 <div className="updated-service-title">Updated Services</div>
                 <div className="updated-service-body">
                   <div className="covid-delivery">
@@ -119,24 +121,31 @@ class BusinessShow extends React.Component {
                   </div>
                 </div>
                 <li className="location-hour-title">Location &#38; Hours</li>
-                <div className="date-time-all">
-                  <div className="date-tag">
-                    <div className="show-day-tag">Mon</div>
-                    <div className="show-day-tag">Tues</div>
-                    <div className="show-day-tag">Wed</div>
-                    <div className="show-day-tag">Thu</div>
-                    <div className="show-day-tag">Fri</div>
-                    <div className="show-day-tag">Sat</div>
-                    <div className="show-day-tag">Sun</div>
+                <div className="map-time-container">
+                  <div className="biz-map-show">
+                    <div className="biz-map-indiv">
+                      <BusinessMap businesses={business} type="show" zoom="false" />
+                    </div>
                   </div>
-                  <div className="time-tag">
-                    <div className="show-time-tag">11:00AM - 9:00PM</div>
-                    <div className="show-time-tag">11:00AM - 9:00PM</div>
-                    <div className="show-time-tag">11:00AM - 9:00PM</div>
-                    <div className="show-time-tag">11:00AM - 9:00PM</div>
-                    <div className="show-time-tag">11:00AM - 9:00PM</div>
-                    <div className="show-time-tag">11:00AM - 9:00PM</div>
-                    <div className="show-time-tag">11:00AM - 9:00PM</div>
+                  <div className="date-time-all">
+                    <div className="date-tag">
+                      <div className="show-day-tag">Mon</div>
+                      <div className="show-day-tag">Tues</div>
+                      <div className="show-day-tag">Wed</div>
+                      <div className="show-day-tag">Thu</div>
+                      <div className="show-day-tag">Fri</div>
+                      <div className="show-day-tag">Sat</div>
+                      <div className="show-day-tag">Sun</div>
+                    </div>
+                    <div className="time-tag">
+                      <div className="show-time-tag">11:00AM - 9:00PM</div>
+                      <div className="show-time-tag">11:00AM - 9:00PM</div>
+                      <div className="show-time-tag">11:00AM - 9:00PM</div>
+                      <div className="show-time-tag">11:00AM - 9:00PM</div>
+                      <div className="show-time-tag">11:00AM - 9:00PM</div>
+                      <div className="show-time-tag">11:00AM - 9:00PM</div>
+                      <div className="show-time-tag">11:00AM - 9:00PM</div>
+                    </div>
                   </div>
                 </div>
                 <div className="review-container">

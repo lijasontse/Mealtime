@@ -44,6 +44,7 @@
   font-family: 'Roboto', sans-serif;
   font-size: 48px;
   color: #fff;
+  font-weight: 900;
 }
 
 .biz-show-details {
@@ -86,7 +87,7 @@
 
 .covid-update {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: 900;
@@ -141,14 +142,15 @@
 .date-time-all {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  width: 300px;
 }
 
-.date-tag {
-  margin-right: -170px
-}
+// .date-tag {
+//   margin-right: -170px
+// }
 
 
 .right-biz-info {
@@ -238,4 +240,27 @@ div.right-biz-info > * {
 
 .biz-show-review > a {
   margin-left: 11px;
+}
+
+.biz-map-show {
+    height: 100%;
+    padding: 20px;
+    margin: 0px;
+}
+
+.biz-map-indiv {
+  width: 315px;
+  height: 215px;
+}
+
+.map-time-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.biz-cool-message {
+  width: 700px;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
 }

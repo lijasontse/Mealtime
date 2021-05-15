@@ -48,7 +48,7 @@ ActiveRecord::Base
 
   biz1 = Business.create!(
     name: "ShanDong Restaurant",
-    category: "Chinese",
+    category: "Chinese, Seafood, Noodles",
     address: "328 10th St Ste 101",
     city: "Oakland",
     state: "CA",
@@ -57,7 +57,8 @@ ActiveRecord::Base
     website_url: "https://shandongoakland.com",
     lat: 37.80065088595391, 
     lng: -122.26998911950326,
-    owner_id: 1
+    owner_id: 1,
+    message: "We specialize in making Hand Made items from scratch with fresh ingredients daily. Come watch and try our fresh hand made dumplings, pot-stickers and noodles being made in house."
   )
 
   pic1Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz1a.png')
@@ -83,7 +84,8 @@ ActiveRecord::Base
     website_url: "https://champagarden.bestcafes.online/",
     lat: 37.725204056220235,
     lng: -122.46002702869959,
-    owner_id: 3
+    owner_id: 3,
+    message: "They are definitely doing delivery via yelp, using Grubhub. You can order at the restaurant and wait for your food. I also noticed people picking up food for their phone orders. There is no dine in service. Hope that helps."
   )
 
   pic2Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz2a.png')
@@ -109,7 +111,8 @@ ActiveRecord::Base
     website_url: "https://biritemarket.com/creamery",
     lat: 37.76239230666739, 
     lng: -122.42576200949073,
-    owner_id: 2
+    owner_id: 2,
+    message: "Bi-Rite Creamery is scooping all your favorite seasonal, signature, and dairy-free flavors, and crafting incredible sundaes! You can also order ahead and pop by to pick-up pre-packaged ice cream cups, sandwiches, popsicles, and ice cream cakes..."
   )
   
   pic3Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz3a.png')
@@ -135,7 +138,8 @@ ActiveRecord::Base
     website_url: "https://www.izakayarintaro.com/",
     lat: 37.76896827085968, 
     lng: -122.41512537287721,
-    owner_id: 4
+    owner_id: 4,
+    message: "Rintaro brings the experience of a Tokyo izakaya to San Francisco. The food tastes both like Japan and California -not fusion food - but the food you'd expect if the Bay Area were a region of Japan..."
   )
 
   pic4Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz4a.png')
@@ -161,7 +165,8 @@ ActiveRecord::Base
     website_url: "http://hinatasf.com/",
     lat: 37.783297308395845, 
     lng: -122.4205711440412,
-    owner_id: 4
+    owner_id: 4,
+    message: "Due to the current Government restrictions in place, we are now accepting reservations for dine in parties with limited seating. Thank you and we look forward to seeing you at Hinata."
   )
 
   pic5Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz5a.png')
@@ -187,7 +192,8 @@ ActiveRecord::Base
     website_url: "https://dumplingtime.com/",
     lat: 37.76989522157689, 
     lng: -122.40237817287723,
-    owner_id: 4
+    owner_id: 4,
+    message: "We are now OPEN for indoor dining! Seating is limited, but we are thrilled to be serving our community once again."
   )
 
   pic6Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz6a.png')
@@ -214,7 +220,8 @@ ActiveRecord::Base
     website_url: "https://www.bobaguys.com/",
     lat: 37.76054579458712, 
     lng: -122.42097833443111,
-    owner_id: 4
+    owner_id: 4,
+    message: "I always make sure to stop by Boba Guys when I'm visiting this area. With covid-19, they have 2 lines outside in front of the store so be sure to read which line is for you..."
   )
 
   pic7Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz7a.png')
@@ -240,7 +247,8 @@ ActiveRecord::Base
     website_url: "https://fogodechao.com/reservations/?utm_campaign=Q1+2021+Bone-In&utm_source=Yelp",
     lat: 37.78512202963564, 
     lng: -122.39991470171243,
-    owner_id: 4
+    owner_id: 4,
+    message: "Fogo de Chao is the leading Brazilian steakhouse specializing in fire-roasting high-quality meats since 1979 utilizing the centuries-old Southern Brazilian cooking technique of churrasco."
   )
 
   pic8Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz8a.png')
@@ -266,7 +274,8 @@ ActiveRecord::Base
     website_url: "http://tcwus.com/",
     lat: 37.76118013597663, 
     lng: -122.48953808637037,
-    owner_id: 4
+    owner_id: 4,
+    message: "Contact the business for more information about recent service changes."
   )
 
   pic9Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz9a.png')
@@ -292,7 +301,8 @@ ActiveRecord::Base
     website_url: "",
     lat: 37.78018335403533, 
     lng: -122.48165211520563,
-    owner_id: 4
+    owner_id: 4,
+    message: "Beer Sangria Hot Sake buy 1 get 1 FREE"
   )
 
   pic10Index = open('https://mealtime-img.s3-us-west-1.amazonaws.com/biz10a.png')
