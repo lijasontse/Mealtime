@@ -16,19 +16,31 @@ class ReviewIndexItem extends React.Component {
       .then(window.location.reload())
   };
 
+  handleClick(id) {
+    if (document.getElementById(`myReviewDropdown${id}`).style.display === "block") {
+      document.getElementById(`myReviewDropdown${id}`).style.display = "none";
+    } else {
+      document.getElementById(`myReviewDropdown${id}`).style.display = "block";
+    }
+  }
+
   buttonVisible() {
     if (this.props.currentUser === this.props.review.reviewerId) 
       return (
         <div className="edit-delete-review">
-          <div className="ellipsis-icon">
-            <FontAwesomeIcon
-              icon={faEllipsisH}
-              size="lg"
-            />
+          <div className={'dropdown-review'}>
+            <div className="reviewDropdwn">
+              <button className="review-options" onClick={() => this.handleClick(this.props.review.id)}>
+                  <FontAwesomeIcon
+                    icon={faEllipsisH}
+                    size="lg"
+                  />
+              </button>
+            </div>
           </div>
-          <div className="toggle-icon">
-            <button className="edit-btn"><Link to={`/businesses/${this.props.review.business_id}/review/${this.props.review.id}/edit`}>Edit Review</Link></button>
-            <button className="delete-btn" onClick={this.handleDelete}>Remove Review</button>
+          <div className="review-dropdown-content" id={`myReviewDropdown${this.props.review.id}`}>
+              <button className="edit-btn"><Link to={`/businesses/${this.props.review.business_id}/review/${this.props.review.id}/edit`}>Edit Review</Link></button>
+              <button className="delete-btn" onClick={this.handleDelete}>Remove Review</button>
           </div>
         </div>
       );

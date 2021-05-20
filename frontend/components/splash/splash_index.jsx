@@ -4,6 +4,8 @@ import NavBarContainer from '../navbar/navbar_container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../footer/footer';
+import Search from '../search/search_container';
+
 
 class SplashIndex extends React.Component {
   constructor(props) {
@@ -55,12 +57,19 @@ class SplashIndex extends React.Component {
               </div>
             </div>
               <Link to="/"><img className="logo-home" src={window.mealTimeLogo2} /></Link>
+              <Search />
           </div>
         </header>
         <div className="splash-index">
           <div className="splash-title">Hot &#38; New Businesses</div>
 
           <div className="splash-biz">
+
+            <div className="allbiz">
+              <Link to='businesses'><img src={window.allbiz} className="biz-pic" /></Link>
+              <div><figcaption className="biz-cap">All Businesses</figcaption></div>
+            </div>
+
             <div className="biz-1">
               <Link to='businesses/1'><img src={window.biz1} className="biz-pic"/></Link>
               <div><figcaption className="biz-cap">Shan Dong Restaurant</figcaption></div>

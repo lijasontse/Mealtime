@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import NavBarContainer from '../navbar/navbar_container';
 import BusinessIndexItem from './business_index_item';
 import BusinessMap from './business_map';
-import Footer from '../footer/footer'
 
 class BusinessIndex extends React.Component {
   componentDidMount() {
@@ -37,7 +36,6 @@ class BusinessIndex extends React.Component {
             </div>
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }

@@ -10,18 +10,44 @@ import BusinessMap from '../business/business_map';
 class BusinessShow extends React.Component {
   constructor(props) {
     super(props);
+    // this.avgStar = ''
+    // this.oneStar = <div className="one-star"><img src="https://mealtime-img.s3-us-west-1.amazonaws.com/onestar.png" /></div>
+    // this.twoStar = <div className="two-star"><img src="https://mealtime-img.s3-us-west-1.amazonaws.com/twostar.png" /></div>
+    // this.threeStar = <div className="three-star"><img src="https://mealtime-img.s3-us-west-1.amazonaws.com/threestar.png" /></div>
+    // this.fourStar = <div className="four-star"><img src="https://mealtime-img.s3-us-west-1.amazonaws.com/fourstar.png" /></div>
+    // this.fiveStar = <div className="five-star"><img src="https://mealtime-img.s3-us-west-1.amazonaws.com/fivestar.png" /></div>
   }
 
   componentDidMount() {
     this.props.fetchBusiness(this.props.match.params.businessId);
     this.props.fetchReviews();
     this.props.fetchUsers();
+    // this.props.fetchBusinesses();
   }
 
   render() {
     const { business, reviews, photoUrls } = this.props;
 
-    if (!business) return <h1>Loading...</h1>
+    
+
+    if (!business) { 
+      return <h1>Loading...</h1> 
+    // } else {
+    //   let finalRating = 0;
+    //   if (business.reviews.length === 0) {
+    //     finalRating = 5;
+    //   } else {
+    //     let allRating = 0;
+    //     let avgRating = 0;
+    //     for (let i = 0; i < business.reviews.length; i++) {
+    //       allRating += business.reviews[i].rating;
+    //     }
+  
+    //     avgRating = allRating / business.reviews.length;
+    //     finalRating = Math.floor(avgRating);
+    //   }
+    }
+
     return (
       <div>
         <NavBarContainer />
@@ -38,6 +64,8 @@ class BusinessShow extends React.Component {
         </div>
         <div className="show-top-info">
           <h2 className="biz-show-name">{business.name}</h2>
+          
+
           <li className="biz-show-details">
             <div className="biz-show-claimed">
               <FontAwesomeIcon
@@ -129,22 +157,22 @@ class BusinessShow extends React.Component {
                   </div>
                   <div className="date-time-all">
                     <div className="date-tag">
-                      <div className="show-day-tag">Mon</div>
-                      <div className="show-day-tag">Tues</div>
-                      <div className="show-day-tag">Wed</div>
-                      <div className="show-day-tag">Thu</div>
-                      <div className="show-day-tag">Fri</div>
-                      <div className="show-day-tag">Sat</div>
-                      <div className="show-day-tag">Sun</div>
+                      <div className="show-day-tag">{business.days[0]}</div>
+                      <div className="show-day-tag">{business.days[1]}</div>
+                      <div className="show-day-tag">{business.days[2]}</div>
+                      <div className="show-day-tag">{business.days[3]}</div>
+                      <div className="show-day-tag">{business.days[4]}</div>
+                      <div className="show-day-tag">{business.days[5]}</div>
+                      <div className="show-day-tag">{business.days[6]}</div>
                     </div>
                     <div className="time-tag">
-                      <div className="show-time-tag">11:00AM - 9:00PM</div>
-                      <div className="show-time-tag">11:00AM - 9:00PM</div>
-                      <div className="show-time-tag">11:00AM - 9:00PM</div>
-                      <div className="show-time-tag">11:00AM - 9:00PM</div>
-                      <div className="show-time-tag">11:00AM - 9:00PM</div>
-                      <div className="show-time-tag">11:00AM - 9:00PM</div>
-                      <div className="show-time-tag">11:00AM - 9:00PM</div>
+                      <div className="show-time-tag">{business.hours[0]}</div>
+                      <div className="show-time-tag">{business.hours[1]}</div>
+                      <div className="show-time-tag">{business.hours[2]}</div>
+                      <div className="show-time-tag">{business.hours[3]}</div>
+                      <div className="show-time-tag">{business.hours[4]}</div>
+                      <div className="show-time-tag">{business.hours[5]}</div>
+                      <div className="show-time-tag">{business.hours[6]}</div>
                     </div>
                   </div>
                 </div>
@@ -174,12 +202,15 @@ class BusinessShow extends React.Component {
                 />
               </div>
               <div className="biz-show-get-dir-tag">
-                <span className="dir-tag">Get Directions
-                    <FontAwesomeIcon
-                    icon={faMapSigns}
-                    size="lg"
-                  />
-                </span>
+                <a className="dir-tag" href={`https://www.google.com/maps/dir/?api=1&destination=${business.lat},${business.lng}`} target="_blank">
+                  <div className="dir-tag-text">Get Directions</div>
+                  <span>
+                      <FontAwesomeIcon
+                      icon={faMapSigns}
+                      size="lg"
+                    />
+                  </span>
+                </a>
                 <span className="show-address">
                   {business.address}&nbsp;
                         {business.city}&#44;&nbsp;

@@ -11,7 +11,9 @@ json.extract! business,
               :owner_id,
               :lat,
               :lng,
-              :message
+              :message,
+              :hours,
+              :days
             
 if business.photo.attached?
   json.photoUrl url_for(business.photo)

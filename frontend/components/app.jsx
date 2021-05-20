@@ -21,6 +21,7 @@ const App = () => (
       <Route exact path="/businesses" component={BusinessIndexContainer}/>
       <Route exact path="/businesses/:businessId" component={BusinessShowContainer}/>
       <Route exact path="/" component={SplashContainer}/>
+      {/* <Route exact path="/businesses/undefined" component={errorPage} /> */}
       <Route component={errorPage}/>
     </Switch>
   </div>

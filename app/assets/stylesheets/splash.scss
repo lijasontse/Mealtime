@@ -1,5 +1,5 @@
 .splash-head {
-  background-image: asset-url("homepage.png");
+  background-image: asset-url("homepage1.jpeg");
   height: 61vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,12 +13,13 @@
 
 .logo-home {
   display: block;
-  height: 50px;
+  height: 60px;
   width: auto;
   margin-left: auto;
   margin-right: auto;
   padding-top: 15px;
   cursor: pointer;
+  padding-bottom: 35px;
 }
 
 .mt-splash-logo > a {
@@ -141,6 +142,8 @@
 .sp-user-navs:hover .sp-user-dropdown-btn{
 	display: block;
 }
+
+
 
 .sp-user-dropdown-btn {
 	position: absolute;

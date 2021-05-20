@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
+import Search from '../search/search_container';
 
 
 class NavBar extends React.Component {
@@ -47,6 +48,7 @@ class NavBar extends React.Component {
         <div className="left-nav">
           <Link to="/"><img className="logo-left" src={window.mealTimeLogo2} /></Link>
         </div>
+        <Search />
         <div className="right-nav">
           {display}
         </div>

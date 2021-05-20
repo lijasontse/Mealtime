@@ -1,16 +1,3 @@
-// .mt-nav-logo {
-//   background-image: asset-url('mtlogo2.png');
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: 15vh;
-//   height: 50px;
-//   width: 250px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   padding: 150px 0;
-//   cursor: pointer;
-// }
-
 .right-nav {
   display: flex;
   justify-content: flex-end;
@@ -25,10 +12,6 @@
 
 #user-navs {
   position: relative;
-  padding: 7px 9px;
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 20px 0 0;
   width: 25%;
 }
 
@@ -39,8 +22,7 @@
 .user-dropdown-btn {
 	position: absolute;
 	display: none;
-	top: 45px;
-	right: 0;
+	right: -21px;
 	border-radius: 3px;
 	width: 150px;
   height: 100px;
@@ -100,20 +82,18 @@
 
 .all-navs {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-top: 25px;
+  margin-bottom: 20px;
 }
 
-.nav-links {
-  margin-right: -327px;
-}
 
 .login {
   border: 1px solid #999;
   margin: 35px 20px 0 0;
   font-family: 'Open Sans', sans-serif;
-  padding: 8px 16px;
+  padding: 7px 21px;
   color: black;
   font-size: 16px;
   position: relative;
@@ -127,7 +107,6 @@
 }
 
 .signup {
-  margin: 35px 365px 0 0;
   font-family: 'Open Sans', sans-serif;
   padding: 8px 16px;
   background: green;
@@ -139,7 +118,13 @@
   text-align: center;
   box-sizing: border-box;
   position: relative;
+  transition: background-color 0.3s;
 }
+
+.signup:hover {
+  background: rgb(2, 158, 2);
+}
+
 
 
 

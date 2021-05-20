@@ -17,7 +17,7 @@
 
 .review-body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
   color: rgb(62, 61, 61);
   margin-bottom: 15px;
@@ -30,39 +30,56 @@
   align-items: flex-end;
 }
 
-.toggle-icon {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  width: fit-content;
-}
-
 .edit-btn {
   font-family: 'Open Sans', sans-serif;
-  border-radius: 5px;
-  background-color: #d32323;
-  padding: 9px 13px;
-  color: #fff;
-  box-shadow: none;
-  border: 2px solid #fff;
-  font-size: 13px;
+  background-color: transparent; 
+  padding: 15px;
+  color: black ;
+  font-size: 15px;
+  border: none;
+  width: 190px;
+  align-self: center;
+}
+
+// .edit-btn:hover, .delete-btn:hover {
+//   background-color: rgb(226, 226, 230);
+  
+// }
+
+// .edit-btn > a {
+//   padding: 10px 38px;
+// }
+
+// .delete-btn {
+//   padding: 10px 38px;
+// }
+
+.edit-btn:hover {
+  background-color: rgb(226, 226, 230);
+}
+
+
+.delete-btn:hover {
+  background-color: rgb(226, 226, 230);
 }
 
 .delete-btn {
   font-family: 'Open Sans', sans-serif;
-  border-radius: 5px;
-  background-color: #d32323;
-  padding: 9px 13px;
-  color: #fff;
-  box-shadow: none;
-  border: 2px solid #fff;
-  font-size: 13px;
+  background-color: transparent; 
+  padding: 15px;
+  color: black ;
+  font-size: 15px;
+  border: none;
+  width: 190px;
+  align-self: center;
 }
+
 
 .ellipsis-icon {
   margin-left: 20px;
   float: right;
 }
+
 
 .reviewer-names > svg {
   background-color: #d32323;
@@ -135,4 +152,38 @@
   font-size: 14px;
   color: rgb(144, 143, 153);
   width: 58px;
+}
+
+.dropdown-review {
+  position: relative;
+  display: inline-block;
+}
+
+.review-options {
+  background-color: transparent;
+  border: none;
+  color: rgb(144, 143, 153);
+  outline: none;
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+
+.review-options:hover {
+  border-radius: 50%;
+  background-color: rgb(226, 226, 230);
+}
+
+.review-dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 60px;
+  z-index: 1;
+  background-color: transparent;
+  width: 190px;
+  border-radius: 3px;
+  box-shadow: 12px 8px 5px rgba(rgb(186, 184, 184), 0.2), 0px 7px 18px rgba(rgb(186, 184, 184), 0.5);
+  color: #2B273C;
+  margin-top: 48px;
+  margin-right: 12px;
 }

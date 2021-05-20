@@ -38,6 +38,55 @@ ActiveRecord::Base
     email: "teddy@gmail.com",
     password: 'a123456'
   )
+
+  u4 = User.create!(
+    first_name: "John",
+    last_name: "Smithy",
+    email: "john@gmail.com",
+    password: 'a123456'
+  )
+
+  u5 = User.create!(
+    first_name: "Kevin",
+    last_name: "Mahoney",
+    email: "kevin@gmail.com",
+    password: 'a123456'
+  )
+
+  u6 = User.create!(
+    first_name: "Alex",
+    last_name: "Xander",
+    email: "alex@gmail.com",
+    password: 'a123456'
+  )
+
+  u7 = User.create!(
+    first_name: "Benni",
+    last_name: "Gah",
+    email: "benni@gmail.com",
+    password: 'a123456'
+  )
+
+  u8 = User.create!(
+    first_name: "Jackie",
+    last_name: "Chen",
+    email: "jacky@gmail.com",
+    password: 'a123456'
+  )
+
+  u9 = User.create!(
+    first_name: "Sherman",
+    last_name: "Yan",
+    email: "syan@gmail.com",
+    password: 'a123456'
+  )
+
+  u10 = User.create!(
+    first_name: "Louie",
+    last_name: "Zheng",
+    email: "louie@gmail.com",
+    password: 'a123456'
+  )
   
   demoUser = User.create!(
     first_name: "Dee",
@@ -58,6 +107,24 @@ ActiveRecord::Base
     lat: 37.80065088595391, 
     lng: -122.26998911950326,
     owner_id: 1,
+    days: [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    hours: [
+      "Closed",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:30 PM",
+      "11:00 AM - 9:30 PM",
+      "11:00 AM - 9:00 PM"
+    ],
     message: "We specialize in making Hand Made items from scratch with fresh ingredients daily. Come watch and try our fresh hand made dumplings, pot-stickers and noodles being made in house."
   )
 
@@ -85,6 +152,24 @@ ActiveRecord::Base
     lat: 37.725204056220235,
     lng: -122.46002702869959,
     owner_id: 3,
+    days: [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    hours: [
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 10:00 PM",
+      "11:00 AM - 10:00 PM",
+      "11:00 AM - 9:00 PM"
+    ],
     message: "They are definitely doing delivery via yelp, using Grubhub. You can order at the restaurant and wait for your food. I also noticed people picking up food for their phone orders. There is no dine in service. Hope that helps."
   )
 
@@ -112,6 +197,24 @@ ActiveRecord::Base
     lat: 37.76239230666739, 
     lng: -122.42576200949073,
     owner_id: 2,
+    days: [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    hours: [
+      "1:00 PM - 8:00 PM",
+      "1:00 PM - 8:00 PM",
+      "1:00 PM - 8:00 PM",
+      "1:00 PM - 8:00 PM",
+      "1:00 PM - 8:00 PM",
+      "1:00 PM - 8:00 PM",
+      "1:00 PM - 8:00 PM"
+    ],
     message: "Bi-Rite Creamery is scooping all your favorite seasonal, signature, and dairy-free flavors, and crafting incredible sundaes! You can also order ahead and pop by to pick-up pre-packaged ice cream cups, sandwiches, popsicles, and ice cream cakes..."
   )
   
@@ -139,6 +242,24 @@ ActiveRecord::Base
     lat: 37.76896827085968, 
     lng: -122.41512537287721,
     owner_id: 4,
+    days: [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    hours: [
+      "5:00 PM - 9:15 PM",
+      "5:00 PM - 9:15 PM",
+      "5:00 PM - 9:15 PM",
+      "5:00 PM - 9:15 PM",
+      "5:00 PM - 9:30 PM",
+      "5:00 PM - 9:30 PM",
+      "5:00 PM - 9:15 PM"
+    ],
     message: "Rintaro brings the experience of a Tokyo izakaya to San Francisco. The food tastes both like Japan and California -not fusion food - but the food you'd expect if the Bay Area were a region of Japan..."
   )
 
@@ -166,6 +287,24 @@ ActiveRecord::Base
     lat: 37.783297308395845, 
     lng: -122.4205711440412,
     owner_id: 4,
+    days: [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    hours: [
+      "Closed",
+      "6:00 PM - 10:30 PM",
+      "6:00 PM - 10:30 PM",
+      "6:00 PM - 10:30 PM",
+      "6:00 PM - 10:30 PM",
+      "6:00 PM - 10:30 PM",
+      "6:00 PM - 10:30 PM"
+    ],
     message: "Due to the current Government restrictions in place, we are now accepting reservations for dine in parties with limited seating. Thank you and we look forward to seeing you at Hinata."
   )
 
@@ -193,6 +332,24 @@ ActiveRecord::Base
     lat: 37.76989522157689, 
     lng: -122.40237817287723,
     owner_id: 4,
+    days: [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    hours: [
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "10:00 AM - 9:00 PM",
+      "10:00 AM - 9:00 PM"
+    ],
     message: "We are now OPEN for indoor dining! Seating is limited, but we are thrilled to be serving our community once again."
   )
 
@@ -221,6 +378,24 @@ ActiveRecord::Base
     lat: 37.76054579458712, 
     lng: -122.42097833443111,
     owner_id: 4,
+    days: [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    hours: [
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "11:00 AM - 9:00 PM",
+      "10:00 AM - 9:00 PM",
+      "10:00 AM - 9:00 PM"
+    ],
     message: "I always make sure to stop by Boba Guys when I'm visiting this area. With covid-19, they have 2 lines outside in front of the store so be sure to read which line is for you..."
   )
 
@@ -248,6 +423,24 @@ ActiveRecord::Base
     lat: 37.78512202963564, 
     lng: -122.39991470171243,
     owner_id: 4,
+    days: [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    hours: [
+      "11:30 AM - 10:00 PM",
+      "11:30 AM - 10:00 PM",
+      "11:30 AM - 10:00 PM",
+      "11:30 AM - 10:00 PM",
+      "11:30 AM - 10:30 PM",
+      "11:30 AM - 10:30 PM",
+      "11:00 AM - 9:00 PM"
+    ],
     message: "Fogo de Chao is the leading Brazilian steakhouse specializing in fire-roasting high-quality meats since 1979 utilizing the centuries-old Southern Brazilian cooking technique of churrasco."
   )
 
@@ -275,6 +468,24 @@ ActiveRecord::Base
     lat: 37.76118013597663, 
     lng: -122.48953808637037,
     owner_id: 4,
+    days: [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    hours: [
+      "Closed",
+      "5:30 PM - 9:15 PM",
+      "5:30 PM - 9:15 PM",
+      "5:30 PM - 9:15 PM",
+      "5:30 PM - 9:15 PM",
+      "5:30 PM - 9:15 PM",
+      "5:30 PM - 9:15 PM"
+    ],
     message: "Contact the business for more information about recent service changes."
   )
 
@@ -302,6 +513,24 @@ ActiveRecord::Base
     lat: 37.78018335403533, 
     lng: -122.48165211520563,
     owner_id: 4,
+    days: [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    hours: [
+      "12:00 PM - 10:00 PM",
+      "Closed",
+      "12:00 PM - 10:00 PM",
+      "12:00 PM - 10:00 PM",
+      "12:00 PM - 10:00 PM",
+      "12:00 PM - 10:00 PM",
+      "12:00 PM - 10:00 PM"
+    ],
     message: "Beer Sangria Hot Sake buy 1 get 1 FREE"
   )
 
@@ -340,49 +569,49 @@ ActiveRecord::Base
   )
 
   r4 = Review.create!(
-  author_id: 1,
+  author_id: 4,
   body: "The skewers are amazing here, I love this place so much",
   rating: 5,
   business_id: 4
   )
 
   r5 = Review.create!(
-  author_id: 2,
+  author_id: 5,
   body: "Affordable omakase but an amazing experience",
   rating: 4,
   business_id: 5
   )
 
   r6 = Review.create!(
-  author_id: 4,
+  author_id: 6,
   body: "Super expensive... Would consider going back",
   rating: 3,
   business_id: 6
   )
 
   r7 = Review.create!(
-  author_id: 1,
+  author_id: 7,
   body: "I love the milk they use for their milk tea",
   rating: 5,
   business_id: 7
   )
 
   r8 = Review.create!(
-  author_id: 3,
+  author_id: 8,
   body: "YUM FRESHLY SLICED STEAK!!!",
   rating: 4,
   business_id: 8
   )
 
   r9 = Review.create!(
-  author_id: 3,
+  author_id: 9,
   body: "Authentic Chinese food, get in my belly",
   rating: 5,
   business_id: 9
   )
 
   r10 = Review.create!(
-  author_id: 2,
+  author_id: 10,
   body: "Reminds me of Taiwan, cute spot",
   rating: 4,
   business_id: 10
