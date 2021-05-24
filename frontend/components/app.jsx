@@ -16,12 +16,12 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+      <Route path="/businesses/undefined" component={errorPage} />
       <ProtectedRoute exact path="/businesses/:businessId/newreview" component={ReviewFormContainer} />
       <ProtectedRoute exact path="/businesses/:businessId/review/:reviewId/edit" component={EditReviewFormContainer} />
       <Route exact path="/businesses" component={BusinessIndexContainer}/>
       <Route exact path="/businesses/:businessId" component={BusinessShowContainer}/>
       <Route exact path="/" component={SplashContainer}/>
-      {/* <Route exact path="/businesses/undefined" component={errorPage} /> */}
       <Route component={errorPage}/>
     </Switch>
   </div>
