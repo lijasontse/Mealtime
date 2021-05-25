@@ -10,12 +10,6 @@ import BusinessMap from '../business/business_map';
 class BusinessShow extends React.Component {
   constructor(props) {
     super(props);
-    // this.avgStar = ''
-    // this.oneStar = <div className="one-star"><img src="https://mealtime-img.s3-us-west-1.amazonaws.com/onestar.png" /></div>
-    // this.twoStar = <div className="two-star"><img src="https://mealtime-img.s3-us-west-1.amazonaws.com/twostar.png" /></div>
-    // this.threeStar = <div className="three-star"><img src="https://mealtime-img.s3-us-west-1.amazonaws.com/threestar.png" /></div>
-    // this.fourStar = <div className="four-star"><img src="https://mealtime-img.s3-us-west-1.amazonaws.com/fourstar.png" /></div>
-    // this.fiveStar = <div className="five-star"><img src="https://mealtime-img.s3-us-west-1.amazonaws.com/fivestar.png" /></div>
   }
 
   componentDidMount() {
@@ -28,27 +22,55 @@ class BusinessShow extends React.Component {
   render() {
     const { business, reviews, photoUrls } = this.props;
 
+    let showRating = <div></div>;
+    let reviewArr = Object.values(reviews);
     
-
     if (!business) { 
       return <h1>Loading...</h1> 
-    // } else {
-    //   let finalRating = 0;
-    //   if (business.reviews.length === 0) {
-    //     finalRating = 5;
-    //   } else {
-    //     let allRating = 0;
-    //     let avgRating = 0;
-    //     for (let i = 0; i < business.reviews.length; i++) {
-    //       allRating += business.reviews[i].rating;
-    //     }
+    } else {
+      let finalRating = 0;
+      if (reviewArr.length === 0) {
+        finalRating = 5;
+      } else {
+        let allRating = 0;
+        let avgRating = 0;
+        for (let i = 0; i < reviewArr.length; i++) {
+          if (reviewArr[i].business_id === business.id) {
+            allRating += reviewArr[i].rating;
+          }
+        }
   
-    //     avgRating = allRating / business.reviews.length;
-    //     finalRating = Math.floor(avgRating);
-    //   }
-    }
+        avgRating = allRating / reviewArr.length;
+        finalRating = Math.floor(avgRating);
 
-    // console.log(business.reviews.length)
+        let oneStar = finalRating === 1;
+        let twoStar = finalRating === 2;
+        let threeStar = finalRating === 3;
+        let fourStar = finalRating === 4;
+        let fiveStar = finalRating === 5;
+
+        switch (true) {
+          case oneStar:
+            showRating = <div className="star1"><img src={window.star1} /></div>
+            break;
+          case twoStar:
+            showRating = <div className="star2"><img src={window.star2}/></div>
+            break;
+          case threeStar:
+            showRating = <div className="star3"><img src={window.star3} /></div>
+            break;
+          case fourStar:
+            showRating = <div className="star4"><img src={window.star4} /></div>
+            break;
+          case fiveStar:
+            showRating = <div className="star5"><img src={window.star5} /></div>
+            break;
+          default:
+            break;
+        }
+      }
+    }
+    
     return (
       <div>
         <NavBarContainer />
@@ -65,8 +87,9 @@ class BusinessShow extends React.Component {
         </div>
         <div className="show-top-info">
           <h2 className="biz-show-name">{business.name}</h2>
-          
-
+          <div className="overall-ratings" >{showRating}
+            <div className="num-ratings" >{reviewArr.length} Reviews</div>
+          </div>
           <li className="biz-show-details">
             <div className="biz-show-claimed">
               <FontAwesomeIcon

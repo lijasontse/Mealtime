@@ -37,7 +37,7 @@
 .show-top-info {
   margin-left: 325px;
   position: relative;
-  bottom: 120px;
+  bottom: 170px;
 }
 
 .biz-show-name {
@@ -49,7 +49,7 @@
 
 .biz-show-details {
   display: flex;
-  margin-top: -10px;
+  // margin-top: -10px;
 }
 
 .biz-show-claimed {
@@ -237,7 +237,7 @@ div.right-biz-info > * {
   margin: 0 auto;
   display: flex;
   // justify-content: space-evenly;
-  margin-top: -50px;
+  margin-top: -80px;
   // padding: 0 130px;
 }
 
@@ -287,4 +287,45 @@ div.right-biz-info > * {
   width: 700px;
   margin-bottom: 20px;
   font-family: 'Open Sans', sans-serif;
+}
+
+.overall-ratings {
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+
+.star1 > img{
+  width: 180px;
+  height: 36px;
+  margin-left: -3px;
+}
+.star2 > img {
+  width: 180px;
+  height: 36px;
+  margin-left: -4px;
+}
+.star3 > img {
+  width: 180px;
+  height: 36px;
+  margin-left: -6px;
+}
+.star4 > img {
+  width: 180px;
+  height: 36px;
+  // margin-top: -10px;
+  margin-left: -4px;
+  // margin-bottom: 7px;
+}
+.star5 > img {
+  width: 180px;
+  height: 36px;
+  margin-left: -4px;
+}
+
+.num-ratings {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
+  margin-left: 10px;
 }
