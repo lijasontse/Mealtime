@@ -48,6 +48,7 @@ class BusinessShow extends React.Component {
     //   }
     }
 
+    // console.log(business.reviews.length)
     return (
       <div>
         <NavBarContainer />
