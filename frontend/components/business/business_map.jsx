@@ -12,7 +12,7 @@ class BusinessMap extends React.Component {
         lat: 37.773972,
         lng: -122.431297
       }, // San Francisco coords
-      zoom: 11,
+      zoom: 10,
       mapTypeControl: false,
       scaleControl: false,
       streetViewControl: false,
@@ -23,7 +23,7 @@ class BusinessMap extends React.Component {
     if (this.props.businesses.length > 0) {
       mapOptions = {
         center: { lat: this.props.businesses[0].lat, lng: this.props.businesses[0].lng },
-        zoom: 11,
+        zoom: 10,
         mapTypeControl: false,
         scaleControl: false,
         streetViewControl: false,
@@ -51,7 +51,7 @@ class BusinessMap extends React.Component {
     if (Array.isArray(this.props.businesses)) {
       mapOptions = {
         center: { lat: this.props.businesses[0].lat, lng: this.props.businesses[0].lng },
-        zoom: 11,
+        zoom: 10,
         mapTypeControl: false,
         scaleControl: false,
         streetViewControl: false,
@@ -62,7 +62,7 @@ class BusinessMap extends React.Component {
 
       mapOptions = {
         center: { lat: this.props.businesses.lat, lng: this.props.businesses.lng },
-        zoom: 11,
+        zoom: 10,
         mapTypeControl: false,
         scaleControl: false,
         streetViewControl: false,

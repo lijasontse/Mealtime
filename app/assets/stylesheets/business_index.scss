@@ -39,21 +39,25 @@
 }
 
 .biz-index-container {
-  display: flex;
-  width: 750px;
-  justify-content: space-between;
+  // display: flex;
+  width: 800px;
+  // justify-content: space-between;
   font-family: 'Open Sans', sans-serif;
   margin-top: 18px;
 }
 
 .contact-methods {
-  margin-right: 20px;
+  // margin-right: 20px;
   font-size: 12px;
+  width: 165px;
+  // padding-right: 20px;
   color: rgb(144, 143, 153);
 }
 
 .biz-name {
-  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
   font-weight: 900;
 }
 
@@ -63,16 +67,27 @@
 }
 
 .biz-message {
-  width: 525px;
-  font-size: 14px;
+  // width: 525px;
+  width: 450px;
+  font-size: 12px;
   color: rgb(144, 143, 153);
   margin-top: 10px;
   font-family: 'Roboto', sans-serif;
 
 }
 
+// .business-un-list {
+//   width: 55%;
+// }
+
+// .business-index-item {
+//   width: 55%;
+// }
+
+
 .businesses-index-header {
-  width: 1000px;
+  width: 800px;
+  // margin-left: -50px;
 }
 
 .business-main {

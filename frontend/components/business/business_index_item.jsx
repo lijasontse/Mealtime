@@ -20,7 +20,18 @@ class BusinessIndexItem extends React.Component {
             </div>
             <div className="biz-index-container">
               <li className="biz-details">
-                <div className="biz-name">{idx + 1}. {business.name}</div>
+                <div className="biz-name">{idx + 1}. {business.name}
+                  <div className="contact-methods">
+                    <div className="biz-phone">{business.phone_number}</div>
+                    <div className="whole-address">
+                      <div className="street-address">{business.address}</div>
+                      <div className="regional-address">
+                        {business.city}{", "}
+                        {business.state} {business.zip_code}
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="biz-category">{business.category}</div>
                 <div className="for-icons">
                   <div className="for-delivery">
@@ -50,7 +61,7 @@ class BusinessIndexItem extends React.Component {
                 </div>
                 <div className="biz-message">"{business.message}"</div>
               </li>
-              <div className="contact-methods">
+              {/* <div className="contact-methods">
                 <div className="biz-phone">{business.phone_number}</div>
                 <div className="whole-address">
                   <div className="street-address">{business.address}</div>
@@ -59,7 +70,7 @@ class BusinessIndexItem extends React.Component {
                     {business.state} {business.zip_code}
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </ul>
         </Link>

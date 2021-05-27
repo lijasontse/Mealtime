@@ -85,23 +85,25 @@ class BusinessShow extends React.Component {
             }
           </ul>
         </div>
-        <div className="show-top-info">
-          <h2 className="biz-show-name">{business.name}</h2>
-          <div className="overall-ratings" >{showRating}
-            <div className="num-ratings" >{reviewArr.length} Reviews</div>
-          </div>
-          <li className="biz-show-details">
-            <div className="biz-show-claimed">
-              <FontAwesomeIcon
-                icon={faCheckCircle}
-                color="Dodgerblue"
-                fixedWidth
-              />
-              <span>&nbsp;Claimed &nbsp;</span>
+        <div className="top-info-container">
+          <div className="show-top-info">
+            <h2 className="biz-show-name">{business.name}</h2>
+            <div className="overall-ratings" >{showRating}
+              <div className="num-ratings" >{reviewArr.length} Reviews</div>
             </div>
-            <div className="first-bullet">&#8226;</div>
-            <div className="biz-show-category">{business.category}</div>
-          </li>
+            <li className="biz-show-details">
+              <div className="biz-show-claimed">
+                <FontAwesomeIcon
+                  icon={faCheckCircle}
+                  color="Dodgerblue"
+                  fixedWidth
+                />
+                <span>&nbsp;Claimed &nbsp;</span>
+              </div>
+              <div className="first-bullet">&#8226;</div>
+              <div className="biz-show-category">{business.category}</div>
+            </li>
+          </div>
         </div>
         <div className="biz-show-container">
           <div className="biz-show-mid">

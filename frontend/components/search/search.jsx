@@ -28,7 +28,6 @@ class Search extends React.Component {
   }
 
   matches() {
-    // console.log(this.props.names);
     const results = [];
     if (this.state.inputVal.length === 0) {
       return this.props.names.sort();
