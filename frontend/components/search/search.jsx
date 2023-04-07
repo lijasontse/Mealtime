@@ -98,7 +98,7 @@ class Search extends React.Component {
           <ul className="floating-list">
             {results}
             <Link to={'/businesses'}>
-              <li className="more-biz" onClick={this.selectName}>CHECK OUT MORE BUSINESSES HERE...</li>
+              <li className="more-biz" onClick={this.selectName}>CHECK OUT MORE BUSINESSES HERE....</li>
             </Link>
           </ul>
         </div>
