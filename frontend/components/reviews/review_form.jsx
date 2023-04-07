@@ -111,7 +111,7 @@ class ReviewForm extends React.Component {
                   placeholder="This spot is serving meal kits, as well as offering
                   delivery during COVID. I'm so glad! Of course nothing beats the in-person
                   experience, but delivery is a great second option right now. The food was a little
-                  cold, but I understand this is a new operation for them..."
+                  cold, but I understand this is a new operation for them...."
                 />
               </div>
               {this.renderErrors()}
